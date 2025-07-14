@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Laser
+  - Enemy
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -41,9 +44,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Bakground
-    uniqueID: 3431185239
+  - name: NPC
+    uniqueID: 3340926971
     locked: 0
-  - name: Items
-    uniqueID: 3472782247
+  - name: Environment
+    uniqueID: 1827687781
+    locked: 0
+  - name: Item
+    uniqueID: 2055234291
     locked: 0

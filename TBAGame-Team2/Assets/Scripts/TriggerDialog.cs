@@ -1,0 +1,33 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Unity.VisualScripting;
+using Sirenix.OdinInspector;
+using Fungus;
+
+
+public class TriggerDialog : MonoBehaviour
+{
+    [LabelText("Dialog to Trigger")]
+    public Flowchart flowchart;
+
+    [LabelText("Dialog Block")]
+    public string blockName;
+
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Trigger masuk: " + other.name);
+        if (other.CompareTag("NPC"))
+        {
+            if (flowchart != null && !string.IsNullOrEmpty(blockName))
+            {
+                flowchart.ExecuteBlock(blockName);
+            }
+            else
+            {
+                Debug.LogWarning("Flowchart or block name is not set.");
+            }
+        }
+    }
+}
