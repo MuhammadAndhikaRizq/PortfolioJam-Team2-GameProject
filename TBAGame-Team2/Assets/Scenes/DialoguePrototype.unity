@@ -2160,7 +2160,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &2129091455
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2174,7 +2174,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Mau beli ini, Bang
   description: 
-  character: {fileID: 0}
+  character: {fileID: 93192780}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
