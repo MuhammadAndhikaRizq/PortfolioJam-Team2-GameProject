@@ -28,7 +28,6 @@ public class GameManager : MonoBehaviour
         switch (newState)
         {
             case GameState.Playing:
-                HandlePlaying();
                 break;
             case GameState.Summary:
                 break;
