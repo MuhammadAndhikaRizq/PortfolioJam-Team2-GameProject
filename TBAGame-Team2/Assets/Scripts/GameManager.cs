@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        UpdateGamesState(GameState.MainMenu);
+        UpdateGamesState(GameState.Playing);
     }
     void Awake()
     {
@@ -27,10 +27,8 @@ public class GameManager : MonoBehaviour
 
         switch (newState)
         {
-            case GameState.MainMenu:
-                HandleMainemenu();
-                break;
             case GameState.Playing:
+                HandlePlaying();
                 break;
             case GameState.Summary:
                 break;
@@ -43,10 +41,11 @@ public class GameManager : MonoBehaviour
         OnStateChange?.Invoke(newState);
     }
 
-    private void HandleMainemenu()
+    private void HandlePlaying()
     {
         throw new NotImplementedException();
     }
+
     #endregion
 
 
@@ -77,7 +76,6 @@ public enum TimeCycle
 
 public enum GameState
 {
-    MainMenu,
     Playing,
     Summary,
     End
