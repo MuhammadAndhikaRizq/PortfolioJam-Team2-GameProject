@@ -47,14 +47,14 @@ TagManager:
   - name: Background
     uniqueID: 3573425125
     locked: 0
+  - name: NPC
+    uniqueID: 3340926971
+    locked: 0
   - name: Background1
     uniqueID: 1957405835
     locked: 0
   - name: Background2
     uniqueID: 2487915323
-    locked: 0
-  - name: NPC
-    uniqueID: 3340926971
     locked: 0
   - name: Environment
     uniqueID: 1827687781

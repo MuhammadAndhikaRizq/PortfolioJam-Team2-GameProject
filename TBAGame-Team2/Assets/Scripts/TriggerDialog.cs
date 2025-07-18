@@ -23,6 +23,7 @@ public class TriggerDialog : MonoBehaviour
             if (flowchart != null && !string.IsNullOrEmpty(blockName))
             {
                 flowchart.ExecuteBlock(blockName);
+                this.gameObject.SetActive(false); // Disable the trigger after execution
             }
             else
             {
