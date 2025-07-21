@@ -15,5 +15,12 @@ public class TriggerItem : MonoBehaviour
             Destroy(other.gameObject);
             flowchart.ExecuteBlock("Maya1SecondOrder");
         }
+
+        if (other.CompareTag("Juice"))
+        {
+            flowchart.SetBooleanVariable("isItemDelivered", true);
+            Destroy(other.gameObject);
+            flowchart.ExecuteBlock("OrderWrong");
+        }
     }
 }
