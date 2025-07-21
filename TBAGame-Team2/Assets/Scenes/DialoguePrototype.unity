@@ -1463,6 +1463,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1068428241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1068428243}
+  - component: {fileID: 1068428242}
+  m_Layer: 0
+  m_Name: ===DialogueManager===
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1068428242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068428241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 467277c1e872cd84f869bf804addff93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1068428243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068428241}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.481361, y: -2.9590645, z: -0.06656469}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1109019883
 GameObject:
   m_ObjectHideFlags: 0
@@ -2251,6 +2295,8 @@ GameObject:
   - component: {fileID: 2129091580}
   - component: {fileID: 2129091581}
   - component: {fileID: 2129091582}
+  - component: {fileID: 2129091583}
+  - component: {fileID: 2129091584}
   m_Layer: 0
   m_Name: BuMayaFlowchart
   m_TagString: Untagged
@@ -2283,8 +2329,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 2129091565}
-  selectedCommands: []
+  - {fileID: 2129091578}
+  selectedCommands:
+  - {fileID: 2129091583}
   variables:
   - {fileID: 2129091580}
   description: 
@@ -5292,6 +5339,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 2129091583}
   - {fileID: 2129091577}
   - {fileID: 2129091576}
   - {fileID: 2129091575}
@@ -5303,6 +5351,7 @@ MonoBehaviour:
   - {fileID: 2129091569}
   - {fileID: 2129091568}
   - {fileID: 2129091567}
+  - {fileID: 2129091584}
   - {fileID: 2129091581}
   - {fileID: 2129091582}
   - {fileID: 2129091566}
@@ -5488,6 +5537,36 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &2129091583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129091448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0955dd6307e38214f86d574c4b406cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 128
+  indentLevel: 0
+  dialogueActive: 1
+--- !u!114 &2129091584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129091448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0955dd6307e38214f86d574c4b406cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 129
+  indentLevel: 0
+  dialogueActive: 0
 --- !u!114 &192411975380468498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6511,6 +6590,7 @@ SceneRoots:
   - {fileID: 3750817497848459693}
   - {fileID: 7364255530503504314}
   - {fileID: 484911456}
+  - {fileID: 1068428243}
   - {fileID: 774783060}
   - {fileID: 2023949949}
   - {fileID: 231476930}

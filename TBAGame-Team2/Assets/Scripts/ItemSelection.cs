@@ -7,7 +7,6 @@ public class ItemSelection : MonoBehaviour
 {
     private Vector3 startPosition;
     private Vector3 offset;
-    private Collider2D collider2d;
 
     public bool isDragging = false;
 
@@ -27,17 +26,18 @@ public class ItemSelection : MonoBehaviour
 
     private void InputSystem()
     {
+        if (DialogueManager.isDialogueActive) return; // Disable drag saat Fungus aktif
+
         if (Input.GetMouseButtonDown(0))
         {
-       
-        Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero);
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero);
 
-        if (hit.collider != null && hit.collider.gameObject == gameObject)
-        {
-            isDragging = true;
-            offset = transform.position - MouseWorldPosition(Input.mousePosition);
-        }
+            if (hit.collider != null && hit.collider.gameObject == gameObject)
+            {
+                isDragging = true;
+                offset = transform.position - MouseWorldPosition(Input.mousePosition);
+            }
         }
 
         if (Input.GetMouseButtonUp(0) && isDragging)
@@ -50,8 +50,6 @@ public class ItemSelection : MonoBehaviour
     {
         isDragging = false;
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.zero);
-
-        // collider2d.enabled = true;
     }
     
     protected virtual Vector3 MouseWorldPosition(Vector3 inputPosition)
