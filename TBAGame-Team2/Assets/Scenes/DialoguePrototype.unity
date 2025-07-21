@@ -2297,6 +2297,8 @@ GameObject:
   - component: {fileID: 2129091582}
   - component: {fileID: 2129091583}
   - component: {fileID: 2129091584}
+  - component: {fileID: 2129091586}
+  - component: {fileID: 2129091585}
   m_Layer: 0
   m_Name: BuMayaFlowchart
   m_TagString: Untagged
@@ -2329,9 +2331,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 2129091578}
+  - {fileID: 2129091565}
   selectedCommands:
-  - {fileID: 2129091583}
+  - {fileID: 2129091585}
   variables:
   - {fileID: 2129091580}
   description: 
@@ -4962,6 +4964,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 2129091586}
   - {fileID: 2129091564}
   - {fileID: 2129091563}
   - {fileID: 2129091562}
@@ -4997,6 +5000,7 @@ MonoBehaviour:
   - {fileID: 2129091532}
   - {fileID: 2129091531}
   - {fileID: 2129091530}
+  - {fileID: 2129091585}
   - {fileID: 2129091529}
   suppressAllAutoSelections: 0
 --- !u!114 &2129091566
@@ -5567,6 +5571,36 @@ MonoBehaviour:
   itemId: 129
   indentLevel: 0
   dialogueActive: 0
+--- !u!114 &2129091585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129091448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0955dd6307e38214f86d574c4b406cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 131
+  indentLevel: 0
+  dialogueActive: 0
+--- !u!114 &2129091586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129091448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0955dd6307e38214f86d574c4b406cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 130
+  indentLevel: 0
+  dialogueActive: 1
 --- !u!114 &192411975380468498
 MonoBehaviour:
   m_ObjectHideFlags: 0
