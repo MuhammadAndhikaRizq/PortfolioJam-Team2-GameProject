@@ -2355,6 +2355,10 @@ GameObject:
   - component: {fileID: 2129091584}
   - component: {fileID: 2129091586}
   - component: {fileID: 2129091585}
+  - component: {fileID: 2129091588}
+  - component: {fileID: 2129091590}
+  - component: {fileID: 2129091589}
+  - component: {fileID: 2129091591}
   m_Layer: 0
   m_Name: BuMayaFlowchart
   m_TagString: Untagged
@@ -2387,10 +2391,12 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 2129091511}
-  selectedCommands: []
+  - {fileID: 2129091565}
+  selectedCommands:
+  - {fileID: 2129091588}
   variables:
   - {fileID: 2129091580}
+  - {fileID: 2129091591}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -2417,7 +2423,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 46.664536
     y: 273.55722
-    width: 167.33334
+    width: 163
     height: 40
   tint: {r: 0.6792453, g: 0.4773941, b: 0.4773941, a: 1}
   useCustomTint: 0
@@ -2557,7 +2563,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -11.884735
     y: 112.087494
-    width: 119.333336
+    width: 117
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2613,7 +2619,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 54.92289
     y: 204.24136
-    width: 147.33334
+    width: 144
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3607,7 +3613,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 71.91673
     y: 353.75577
-    width: 112.66667
+    width: 110
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4011,7 +4017,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -95.58325
     y: 330.75577
-    width: 111.33333
+    width: 109
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4039,7 +4045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 116
-  indentLevel: 0
+  indentLevel: 1
   targetFlowchart: {fileID: 2129091449}
   targetBlock: {fileID: 2129091528}
   startLabel:
@@ -4060,7 +4066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 115
-  indentLevel: 0
+  indentLevel: 1
   storyText: Siap Bu!
   description: 
   character: {fileID: 804278575}
@@ -4087,7 +4093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 114
-  indentLevel: 0
+  indentLevel: 1
   storyText: Ah! Mumpung Ibu ingat. Ibu mau beli juga Kopi Kapal Api satu
   description: 
   character: {fileID: 93192780}
@@ -4114,7 +4120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 113
-  indentLevel: 0
+  indentLevel: 1
   storyText: Ah santai aja. Lagian Ibu juga gak buru-buru.
   description: 
   character: {fileID: 93192780}
@@ -4141,7 +4147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 112
-  indentLevel: 0
+  indentLevel: 1
   storyText: Bu Maya kan harus ngantar bekal ke suami ibu.
   description: 
   character: {fileID: 804278575}
@@ -4168,7 +4174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 111
-  indentLevel: 0
+  indentLevel: 1
   storyText: Ah! Maaf saya jadi keasyikan ngobrol!
   description: 
   character: {fileID: 804278575}
@@ -4195,7 +4201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 110
-  indentLevel: 0
+  indentLevel: 1
   storyText: Iya, dan saya harus menjaga warung ini baik-baik.
   description: 
   character: {fileID: 804278575}
@@ -4222,7 +4228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 109
-  indentLevel: 0
+  indentLevel: 1
   storyText: "Ahh\u2026 oke, oke. Pamanmu pasti menaruh kepercayaan penuh untuk kamu."
   description: 
   character: {fileID: 93192780}
@@ -4249,7 +4255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 108
-  indentLevel: 0
+  indentLevel: 1
   storyText: Jadi sayang kalau terbengkalai nggak ada yang ngurus.
   description: 
   character: {fileID: 804278575}
@@ -4276,7 +4282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 107
-  indentLevel: 0
+  indentLevel: 1
   storyText: Jadi kayak, warung ini jadi memori masa kecil saya sih Bu.
   description: 
   character: {fileID: 804278575}
@@ -4303,7 +4309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 106
-  indentLevel: 0
+  indentLevel: 1
   storyText: "Sama\u2026 ya gimana ya. Saya kan dari kecil sering main di warung
     ini."
   description: 
@@ -4331,7 +4337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 105
-  indentLevel: 0
+  indentLevel: 1
   storyText: Daripada ditinggal kosong, mending saya teruskan aja.
   description: 
   character: {fileID: 804278575}
@@ -4358,7 +4364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 104
-  indentLevel: 0
+  indentLevel: 1
   storyText: Iya. Terus warung ini kan warisan dari paman ya.
   description: 
   character: {fileID: 804278575}
@@ -4385,7 +4391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 103
-  indentLevel: 0
+  indentLevel: 1
   storyText: "Oohh\u2026 gitu."
   description: 
   character: {fileID: 93192780}
@@ -4412,7 +4418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 102
-  indentLevel: 0
+  indentLevel: 1
   storyText: Sekarang pindah lagi sih Bu.
   description: 
   character: {fileID: 804278575}
@@ -4439,7 +4445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 101
-  indentLevel: 0
+  indentLevel: 1
   storyText: "Ya\u2026 dulu kan dia pindah dari sini ya?"
   description: 
   character: {fileID: 804278575}
@@ -4466,7 +4472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 100
-  indentLevel: 0
+  indentLevel: 1
   storyText: Anyway, gimana kabar paman kamu?
   description: 
   character: {fileID: 93192780}
@@ -4493,7 +4499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 99
-  indentLevel: 0
+  indentLevel: 1
   storyText: Kangen banget. Tapi gapapa, dia juga sering telpon Ibu.
   description: 
   character: {fileID: 93192780}
@@ -4520,7 +4526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 98
-  indentLevel: 0
+  indentLevel: 1
   storyText: Pasti Ibu kangen sama anak Ibu.
   description: 
   character: {fileID: 804278575}
@@ -4547,7 +4553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 97
-  indentLevel: 0
+  indentLevel: 1
   storyText: Kamu ngingetin Ibu sama anak Ibu yang sekarang lagi kuliah di luar negeri.
   description: 
   character: {fileID: 93192780}
@@ -4574,7 +4580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 96
-  indentLevel: 0
+  indentLevel: 1
   storyText: Sekarang kamu udah gede, udah mandiri.
   description: 
   character: {fileID: 93192780}
@@ -4601,7 +4607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 95
-  indentLevel: 0
+  indentLevel: 1
   storyText: Kamu tahu, dulu Ibu kenal kamu pas masih kecil. Waktu kamu main ke sini
     ke rumah paman sama bibi kamu.
   description: 
@@ -4629,7 +4635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 94
-  indentLevel: 0
+  indentLevel: 1
   storyText: "Siap, siap\u2026"
   description: 
   character: {fileID: 804278575}
@@ -4656,7 +4662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 93
-  indentLevel: 0
+  indentLevel: 1
   storyText: Iya, ini Ibu sekalian mau anter bekal buat suami Ibu.
   description: 
   character: {fileID: 93192780}
@@ -4683,7 +4689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 92
-  indentLevel: 0
+  indentLevel: 1
   storyText: "Oohh\u2026 gitu. Pantes."
   description: 
   character: {fileID: 804278575}
@@ -4710,7 +4716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 91
-  indentLevel: 0
+  indentLevel: 1
   storyText: Iya, katanya ada lab baru, lab yang gede. Semacam center lab gitu.
   description: 
   character: {fileID: 93192780}
@@ -4737,7 +4743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 90
-  indentLevel: 0
+  indentLevel: 1
   storyText: Lah, bangun lagi?
   description: 
   character: {fileID: 804278575}
@@ -4764,7 +4770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 89
-  indentLevel: 0
+  indentLevel: 1
   storyText: Itu, di kampus UMN (Mahardika Nusantara (fiksi)).
   description: 
   character: {fileID: 93192780}
@@ -4791,7 +4797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 88
-  indentLevel: 0
+  indentLevel: 1
   storyText: Proyek di mana Bu?
   description: 
   character: {fileID: 804278575}
@@ -4818,7 +4824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 87
-  indentLevel: 0
+  indentLevel: 1
   storyText: Iya nih, suami Ibu lagi sibuk. Lagi ada proyek baru.
   description: 
   character: {fileID: 93192780}
@@ -4845,7 +4851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 86
-  indentLevel: 0
+  indentLevel: 1
   storyText: Tapi akhir-akhir ini saya jarang ketemu sama suami Ibu.
   description: 
   character: {fileID: 804278575}
@@ -4872,7 +4878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 85
-  indentLevel: 0
+  indentLevel: 1
   storyText: Oh iya. Masuk akal.
   description: 
   character: {fileID: 804278575}
@@ -4899,7 +4905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 84
-  indentLevel: 0
+  indentLevel: 1
   storyText: "Oohh\u2026 ini mah buat suami Ibu."
   description: 
   character: {fileID: 93192780}
@@ -4926,7 +4932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 83
-  indentLevel: 0
+  indentLevel: 1
   storyText: Ngomong-ngomong, rokoknya buat siapa Bu?
   description: 
   character: {fileID: 804278575}
@@ -4953,7 +4959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 82
-  indentLevel: 0
+  indentLevel: 1
   storyText: Sip, bagus buat awal-awal kamu belajar.
   description: 
   character: {fileID: 93192780}
@@ -4980,7 +4986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 81
-  indentLevel: 0
+  indentLevel: 1
   storyText: Siap Bu Maya! Satu Rokok Djarum.
   description: 
   character: {fileID: 804278575}
@@ -5008,18 +5014,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -122.83325
-    y: 261.87808
-    width: 166
+    x: -122.33325
+    y: 262.87808
+    width: 162
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
+  useCustomTint: 1
   itemId: 80
   blockName: Maya1SecondOrder
   description: 
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 2129091586}
+  - {fileID: 2129091588}
+  - {fileID: 2129091590}
+  - {fileID: 2129091589}
   - {fileID: 2129091564}
   - {fileID: 2129091563}
   - {fileID: 2129091562}
@@ -5389,7 +5398,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -113.634735
     y: 200.25237
-    width: 146
+    width: 143
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5639,7 +5648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 131
-  indentLevel: 0
+  indentLevel: 1
   dialogueActive: 0
 --- !u!114 &2129091586
 MonoBehaviour:
@@ -5656,6 +5665,292 @@ MonoBehaviour:
   itemId: 130
   indentLevel: 0
   dialogueActive: 1
+--- !u!114 &2129091588
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129091448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 132
+  indentLevel: 0
+  anyOrAllConditions: 0
+  conditions:
+  - compareOperator: 0
+    anyVar:
+      variable: {fileID: 2129091591}
+      data:
+        animatorData:
+          animatorRef: {fileID: 0}
+          animatorVal: {fileID: 0}
+        audioSourceData:
+          audioSourceRef: {fileID: 0}
+          audioSourceVal: {fileID: 0}
+        booleanData:
+          booleanRef: {fileID: 0}
+          booleanVal: 1
+        collectionData:
+          collectionRef: {fileID: 0}
+          collectionVal: {fileID: 0}
+        collider2DData:
+          collider2DRef: {fileID: 0}
+          collider2DVal: {fileID: 0}
+        colliderData:
+          colliderRef: {fileID: 0}
+          colliderVal: {fileID: 0}
+        colorData:
+          colorRef: {fileID: 0}
+          colorVal: {r: 0, g: 0, b: 0, a: 0}
+        floatData:
+          floatRef: {fileID: 0}
+          floatVal: 0
+        gameObjectData:
+          gameObjectRef: {fileID: 0}
+          gameObjectVal: {fileID: 0}
+        integerData:
+          integerRef: {fileID: 0}
+          integerVal: 1
+        materialData:
+          materialRef: {fileID: 0}
+          materialVal: {fileID: 0}
+        matrix4x4Data:
+          matrix4x4Ref: {fileID: 0}
+          matrix4x4Val:
+            e00: 0
+            e01: 0
+            e02: 0
+            e03: 0
+            e10: 0
+            e11: 0
+            e12: 0
+            e13: 0
+            e20: 0
+            e21: 0
+            e22: 0
+            e23: 0
+            e30: 0
+            e31: 0
+            e32: 0
+            e33: 0
+        objectData:
+          objectRef: {fileID: 0}
+          objectVal: {fileID: 0}
+        quaternionData:
+          quaternionRef: {fileID: 0}
+          quaternionVal: {x: 0, y: 0, z: 0, w: 0}
+        rigidbody2DData:
+          rigidbody2DRef: {fileID: 0}
+          rigidbody2DVal: {fileID: 0}
+        rigidbodyData:
+          rigidbodyRef: {fileID: 0}
+          rigidbodyVal: {fileID: 0}
+        spriteData:
+          spriteRef: {fileID: 0}
+          spriteVal: {fileID: 0}
+        stringData:
+          stringRef: {fileID: 0}
+          stringVal: 
+        textureData:
+          textureRef: {fileID: 0}
+          textureVal: {fileID: 0}
+        transformData:
+          transformRef: {fileID: 0}
+          transformVal: {fileID: 0}
+        vector2Data:
+          vector2Ref: {fileID: 0}
+          vector2Val: {x: 0, y: 0}
+        vector3Data:
+          vector3Ref: {fileID: 0}
+          vector3Val: {x: 0, y: 0, z: 0}
+        vector4Data:
+          vector4Ref: {fileID: 0}
+          vector4Val: {x: 0, y: 0, z: 0, w: 0}
+  compareOperator: 0
+  anyVar:
+    variable: {fileID: 0}
+    data:
+      animatorData:
+        animatorRef: {fileID: 0}
+        animatorVal: {fileID: 0}
+      audioSourceData:
+        audioSourceRef: {fileID: 0}
+        audioSourceVal: {fileID: 0}
+      booleanData:
+        booleanRef: {fileID: 0}
+        booleanVal: 0
+      collectionData:
+        collectionRef: {fileID: 0}
+        collectionVal: {fileID: 0}
+      collider2DData:
+        collider2DRef: {fileID: 0}
+        collider2DVal: {fileID: 0}
+      colliderData:
+        colliderRef: {fileID: 0}
+        colliderVal: {fileID: 0}
+      colorData:
+        colorRef: {fileID: 0}
+        colorVal: {r: 0, g: 0, b: 0, a: 0}
+      floatData:
+        floatRef: {fileID: 0}
+        floatVal: 0
+      gameObjectData:
+        gameObjectRef: {fileID: 0}
+        gameObjectVal: {fileID: 0}
+      integerData:
+        integerRef: {fileID: 0}
+        integerVal: 0
+      materialData:
+        materialRef: {fileID: 0}
+        materialVal: {fileID: 0}
+      matrix4x4Data:
+        matrix4x4Ref: {fileID: 0}
+        matrix4x4Val:
+          e00: 0
+          e01: 0
+          e02: 0
+          e03: 0
+          e10: 0
+          e11: 0
+          e12: 0
+          e13: 0
+          e20: 0
+          e21: 0
+          e22: 0
+          e23: 0
+          e30: 0
+          e31: 0
+          e32: 0
+          e33: 0
+      objectData:
+        objectRef: {fileID: 0}
+        objectVal: {fileID: 0}
+      quaternionData:
+        quaternionRef: {fileID: 0}
+        quaternionVal: {x: 0, y: 0, z: 0, w: 0}
+      rigidbody2DData:
+        rigidbody2DRef: {fileID: 0}
+        rigidbody2DVal: {fileID: 0}
+      rigidbodyData:
+        rigidbodyRef: {fileID: 0}
+        rigidbodyVal: {fileID: 0}
+      spriteData:
+        spriteRef: {fileID: 0}
+        spriteVal: {fileID: 0}
+      stringData:
+        stringRef: {fileID: 0}
+        stringVal: 
+      textureData:
+        textureRef: {fileID: 0}
+        textureVal: {fileID: 0}
+      transformData:
+        transformRef: {fileID: 0}
+        transformVal: {fileID: 0}
+      vector2Data:
+        vector2Ref: {fileID: 0}
+        vector2Val: {x: 0, y: 0}
+      vector3Data:
+        vector3Ref: {fileID: 0}
+        vector3Val: {x: 0, y: 0, z: 0}
+      vector4Data:
+        vector4Ref: {fileID: 0}
+        vector4Val: {x: 0, y: 0, z: 0, w: 0}
+  variable: {fileID: 0}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+  animatorData:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  audioSourceData:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 0}
+  colorData:
+    colorRef: {fileID: 0}
+    colorVal: {r: 0, g: 0, b: 0, a: 0}
+  gameObjectData:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  materialData:
+    materialRef: {fileID: 0}
+    materialVal: {fileID: 0}
+  objectData:
+    objectRef: {fileID: 0}
+    objectVal: {fileID: 0}
+  rigidbody2DData:
+    rigidbody2DRef: {fileID: 0}
+    rigidbody2DVal: {fileID: 0}
+  spriteData:
+    spriteRef: {fileID: 0}
+    spriteVal: {fileID: 0}
+  textureData:
+    textureRef: {fileID: 0}
+    textureVal: {fileID: 0}
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  vector2Data:
+    vector2Ref: {fileID: 0}
+    vector2Val: {x: 0, y: 0}
+  vector3Data:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &2129091589
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129091448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa968f01a7f9496bb50e13dfe16760d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 134
+  indentLevel: 0
+--- !u!114 &2129091590
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129091448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f1ca510a57aa47568a5e4ee558ff41f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 133
+  indentLevel: 1
+--- !u!114 &2129091591
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129091448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: StoryState
+  value: 0
 --- !u!114 &192411975380468498
 MonoBehaviour:
   m_ObjectHideFlags: 0
