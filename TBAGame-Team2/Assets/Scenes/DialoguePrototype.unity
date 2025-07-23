@@ -851,6 +851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowchart: {fileID: 2129091449}
+  npcController: {fileID: 0}
 --- !u!1 &604758350
 GameObject:
   m_ObjectHideFlags: 0
@@ -2379,7 +2380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 254.90294, y: -52.971607}
+  scrollPos: {x: 180.403, y: -112.47164}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -2390,10 +2391,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 2129091565}
-  selectedCommands:
-  - {fileID: 2129091588}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 2129091580}
   - {fileID: 2129091591}
