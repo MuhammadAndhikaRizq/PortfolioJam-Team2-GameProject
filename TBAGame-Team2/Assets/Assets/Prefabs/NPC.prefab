@@ -103,6 +103,7 @@ MonoBehaviour:
   possibleOrders:
   - {fileID: 11400000, guid: e975e153d34caf24e894cf9dae0b5621, type: 2}
   - {fileID: 11400000, guid: bd1499ae35eede246b26bd97642b7c22, type: 2}
+  - {fileID: 11400000, guid: e886c983be4733746b6fda2d96d680e5, type: 2}
   currentOrder: {fileID: 0}
   isOrderCompleted: 0
 --- !u!114 &4733151410152270930

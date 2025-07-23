@@ -8,17 +8,17 @@ using Fungus;
 
 public class TriggerDialog : MonoBehaviour
 {
-    [LabelText("Dialog to Trigger")]
+    /*[LabelText("Dialog to Trigger")]
     public Flowchart flowchart;
 
     [LabelText("Dialog Block")]
-    public string blockName;
+    public string blockName;*/
+    
 
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Trigger masuk: " + other.name);
-        if (other.CompareTag("NPC"))
+        /*if (other.CompareTag("NPC"))
         {
             if (flowchart != null && !string.IsNullOrEmpty(blockName))
             {
@@ -29,6 +29,22 @@ public class TriggerDialog : MonoBehaviour
             {
                 Debug.LogWarning("Flowchart or block name is not set.");
             }
+        }*/
+
+        NPCController npcController = other.GetComponent<NPCController>();
+        if (npcController != null)
+        {
+            NPCOrderData order = npcController.currentOrder;
+            if (other != null && order.isUnique == true)
+            {
+                Debug.Log("Unique NPC! Play");
+            }
+            else
+            {
+                Debug.Log("NPC normal");
+            }
+
         }
+
     }
 }
