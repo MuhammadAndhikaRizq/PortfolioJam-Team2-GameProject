@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178ed68371713fb4b810a3990b4a35e6, type: 3}
   m_Name: Tes2
   m_EditorClassIdentifier: 
-  orderName: 
+  blockName: Variant2
   isUnique: 0
+  myFlowchart: {fileID: 5283662612218598449, guid: 570cde04c9cf07b4b806f81ec329aab2, type: 3}
   requestedItem: {fileID: 11400000, guid: 4a9ba0770f98e4d4382b1af02ececf5b, type: 2}

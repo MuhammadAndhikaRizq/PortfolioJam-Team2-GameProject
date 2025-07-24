@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178ed68371713fb4b810a3990b4a35e6, type: 3}
   m_Name: NPCStoey
   m_EditorClassIdentifier: 
-  orderName: Rokok
+  blockName: Maya1FirstOrder
   isUnique: 1
+  myFlowchart: {fileID: 7636650763362898273, guid: 8fb9f70543b06624a95026deb553fa52, type: 3}
   requestedItem: {fileID: 11400000, guid: 4a9ba0770f98e4d4382b1af02ececf5b, type: 2}

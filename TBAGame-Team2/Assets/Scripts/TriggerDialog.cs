@@ -35,9 +35,9 @@ public class TriggerDialog : MonoBehaviour
         if (npcController != null)
         {
             NPCOrderData order = npcController.currentOrder;
-            if (other != null && order.isUnique == true)
+            if (other != null)
             {
-                Debug.Log("Unique NPC! Play");
+                npcController.currentFlowchart.ExecuteBlock(order.blockName);
             }
             else
             {

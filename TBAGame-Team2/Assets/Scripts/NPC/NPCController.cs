@@ -2,18 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using Fungus;
 
 public class NPCController : MonoBehaviour
 {
     [LabelText("Possible Orders")]
     public NPCOrderData[] possibleOrders;
-    public NPCOrderData currentOrder;
+    [ReadOnly, ShowInInspector]public Flowchart currentFlowchart;
+    [ReadOnly, ShowInInspector] public NPCOrderData currentOrder;
     public bool isOrderCompleted;
+    
 
     void Start()
     {
-        //Sementara
         GenerateRandomOrder();
+        //Sementara
+        GameObject myFlowchart = Instantiate(currentOrder.myFlowchart);
+        currentFlowchart = myFlowchart.GetComponent<Flowchart>();
+        
     }
 
     void GenerateRandomOrder()
@@ -26,4 +32,5 @@ public class NPCController : MonoBehaviour
     {
         return item == currentOrder.requestedItem;
     }
+    
 }
