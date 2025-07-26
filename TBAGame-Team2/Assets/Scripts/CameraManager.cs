@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using Fungus;
 
 public class CameraManager : MonoBehaviour
 {
     public CinemachineVirtualCamera mainCamera;
     public CinemachineVirtualCamera zoomCamera;
 
+    public Flowchart flowchart;
+
     public bool isZoomed = false;
 
     public void TriggerZoom()
     {
+        Debug.Log("Ke Panggill");
         zoomCamera.Priority = 20;
         isZoomed = true;
     }
@@ -21,15 +25,20 @@ public class CameraManager : MonoBehaviour
         zoomCamera.Priority = 0;
         isZoomed = false;
     }
-    
+
 
     // Update is called once per frame
-    void Update()
-    {
-         if (Input.GetKeyDown(KeyCode.Z))
-            TriggerZoom();
+    // void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.Z))
+    //         TriggerZoom();
 
-        if (Input.GetKeyDown(KeyCode.X))
-            ResetZoom();
+    //     if (Input.GetKeyDown(KeyCode.X))
+    //         ResetZoom();
+    // }
+
+    void AutoZoom()
+    {
+        int status = flowchart.GetIntegerVariable("StoryState");
     }
 }

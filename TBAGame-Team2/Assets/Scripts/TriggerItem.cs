@@ -12,6 +12,8 @@ public class TriggerItem : MonoBehaviour
     {
         ItemHolder itemHolder = other.GetComponent<ItemHolder>();
         //int status = flowchart.GetIntegerVariable("StoryState");
+        
+        
         #region NPCTrigger
         if (itemHolder != null)
         {
@@ -24,7 +26,7 @@ public class TriggerItem : MonoBehaviour
                 Debug.Log("Item received: " + itemData.itemName);
             }
             else
-            {  
+            {
                 //flowchart.ExecuteBlock("OrderWrong");
                 Debug.Log("Item not received: " + itemData.itemName);
             }
