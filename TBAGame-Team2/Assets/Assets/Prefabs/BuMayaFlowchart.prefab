@@ -132,6 +132,8 @@ GameObject:
   - component: {fileID: 2753961137727083056}
   - component: {fileID: 8081150406605596850}
   - component: {fileID: 4912307255759759947}
+  - component: {fileID: 482173813594521647}
+  - component: {fileID: 6293449460640529871}
   m_Layer: 0
   m_Name: BuMayaFlowchart
   m_TagString: Untagged
@@ -147,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7636650763362898273}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.40341, y: -2.2729926, z: -0.08504585}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -167,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 180.403, y: -112.47164}
+  scrollPos: {x: 172.403, y: -57.97164}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -179,8 +181,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 8472180685529915776}
-  selectedCommands: []
+  - {fileID: 8905136652488268731}
+  selectedCommands:
+  - {fileID: 6293449460640529871}
   variables:
   - {fileID: 2902679632482879012}
   - {fileID: 4912307255759759947}
@@ -1678,6 +1681,7 @@ MonoBehaviour:
   - {fileID: 4880086655036445789}
   - {fileID: 5180094704557034268}
   - {fileID: 5751362548931261663}
+  - {fileID: 482173813594521647}
   - {fileID: 5659483632412772932}
   - {fileID: 2068133056205254926}
   - {fileID: 5252792837471146527}
@@ -2025,9 +2029,10 @@ MonoBehaviour:
   commandList:
   - {fileID: 7770844715176913733}
   - {fileID: 2712250361217881063}
-  - {fileID: 2753961137727083056}
-  - {fileID: 8081150406605596850}
   - {fileID: 8554530009873067542}
+  - {fileID: 8081150406605596850}
+  - {fileID: 2753961137727083056}
+  - {fileID: 6293449460640529871}
   - {fileID: 726823805337809564}
   - {fileID: 2546748488287503267}
   - {fileID: 8907377702432825582}
@@ -3486,7 +3491,7 @@ MonoBehaviour:
           gameObjectVal: {fileID: 0}
         integerData:
           integerRef: {fileID: 0}
-          integerVal: 1
+          integerVal: 0
         materialData:
           materialRef: {fileID: 0}
           materialVal: {fileID: 0}
@@ -3723,3 +3728,37 @@ MonoBehaviour:
   scope: 0
   key: StoryState
   value: 0
+--- !u!114 &482173813594521647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7636650763362898273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 135
+  indentLevel: 0
+  targetObject: {fileID: 0}
+  methodName: TriggerZoom
+  delay: 0
+--- !u!114 &6293449460640529871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7636650763362898273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 136
+  indentLevel: 1
+  targetObject: {fileID: 0}
+  methodName: ResetZoom
+  delay: 0

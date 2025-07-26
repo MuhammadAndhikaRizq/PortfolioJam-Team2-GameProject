@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockName: Maya1FirstOrder
   isUnique: 1
-  myFlowchart: {fileID: 7636650763362898273, guid: 8fb9f70543b06624a95026deb553fa52, type: 3}
+  myFlowchart: BuMayaFlowchart
+  character: {fileID: 3153945493635957250, guid: 5e98bf0a7ee918b4faf00ca5972a4d10, type: 3}
+  playerCharacter: {fileID: 8791991297770975104, guid: 3ef5f47d4d331514ea380e4444328a3c, type: 3}
   requestedItem: {fileID: 11400000, guid: 4a9ba0770f98e4d4382b1af02ececf5b, type: 2}

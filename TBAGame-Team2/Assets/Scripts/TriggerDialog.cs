@@ -8,11 +8,8 @@ using Fungus;
 
 public class TriggerDialog : MonoBehaviour
 {
-    /*[LabelText("Dialog to Trigger")]
+    [LabelText("Dialog to Trigger")]
     public Flowchart flowchart;
-
-    [LabelText("Dialog Block")]
-    public string blockName;*/
     
 
 
@@ -35,15 +32,8 @@ public class TriggerDialog : MonoBehaviour
         if (npcController != null)
         {
             NPCOrderData order = npcController.currentOrder;
-            if (other != null)
-            {
-                npcController.currentFlowchart.ExecuteBlock(order.blockName);
-            }
-            else
-            {
-                Debug.Log("NPC normal");
-            }
-
+            flowchart = npcController.currentFlowchart;
+            flowchart.ExecuteBlock(order.blockName);
         }
 
     }

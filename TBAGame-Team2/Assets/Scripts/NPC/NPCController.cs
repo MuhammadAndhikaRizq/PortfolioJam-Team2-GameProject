@@ -10,16 +10,27 @@ public class NPCController : MonoBehaviour
     public NPCOrderData[] possibleOrders;
     [ReadOnly, ShowInInspector]public Flowchart currentFlowchart;
     [ReadOnly, ShowInInspector] public NPCOrderData currentOrder;
+    public CameraManager cameraManager;
     public bool isOrderCompleted;
-    
 
-    void Start()
+
+
+    void Awake()
     {
         GenerateRandomOrder();
+    }
+    public void Start()
+    {
         //Sementara
-        GameObject myFlowchart = Instantiate(currentOrder.myFlowchart);
-        currentFlowchart = myFlowchart.GetComponent<Flowchart>();
-        
+        GameObject flowchartObj = GameObject.Find(currentOrder.myFlowchart);
+        if (flowchartObj != null)
+        {
+            currentFlowchart = flowchartObj.GetComponent<Flowchart>();
+        }
+        else
+        {
+            Debug.LogWarning($"Flowchart dengan nama '{currentOrder.myFlowchart}' tidak ditemukan.");
+        }
     }
 
     void GenerateRandomOrder()

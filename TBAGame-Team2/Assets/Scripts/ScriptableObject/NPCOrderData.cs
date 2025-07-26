@@ -7,6 +7,8 @@ public class NPCOrderData : ScriptableObject
 {
     public string blockName;
     public bool isUnique;
-    public GameObject myFlowchart;
+    public string myFlowchart;
+    public GameObject character;
+    public GameObject playerCharacter;
     public ItemData requestedItem;
 }

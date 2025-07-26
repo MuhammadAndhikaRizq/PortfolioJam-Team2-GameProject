@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockName: Variant1
   isUnique: 0
-  myFlowchart: {fileID: 5283662612218598449, guid: 570cde04c9cf07b4b806f81ec329aab2, type: 3}
+  myFlowchart: NormalNPCFlowchart
+  character: {fileID: 2233310514659697619, guid: 3d2e464f39bfbf049a84922235a1ceb0, type: 3}
+  playerCharacter: {fileID: 8791991297770975104, guid: 3ef5f47d4d331514ea380e4444328a3c, type: 3}
   requestedItem: {fileID: 11400000, guid: a4358bdb0a964a04c9454846a9226c76, type: 2}
