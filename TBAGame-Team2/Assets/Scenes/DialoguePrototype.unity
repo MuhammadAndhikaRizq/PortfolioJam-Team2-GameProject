@@ -436,6 +436,7 @@ GameObject:
   - component: {fileID: 223557393}
   - component: {fileID: 223557392}
   - component: {fileID: 223557391}
+  - component: {fileID: 223557395}
   m_Layer: 0
   m_Name: Juice (4)
   m_TagString: Juice
@@ -595,6 +596,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &223557395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223557389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbd30c278b161a4985a7d664ecbd7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverlScaleFactor: 1.5
+  hoverSpeed: 2
 --- !u!1 &231476929
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,6 +753,7 @@ GameObject:
   - component: {fileID: 319089174}
   - component: {fileID: 319089173}
   - component: {fileID: 319089172}
+  - component: {fileID: 319089176}
   m_Layer: 0
   m_Name: Mie (3)
   m_TagString: Juice
@@ -897,6 +913,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &319089176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319089170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbd30c278b161a4985a7d664ecbd7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverlScaleFactor: 1.5
+  hoverSpeed: 2
 --- !u!1 &319883234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,6 +1126,7 @@ GameObject:
   - component: {fileID: 495547477}
   - component: {fileID: 495547476}
   - component: {fileID: 495547475}
+  - component: {fileID: 495547479}
   m_Layer: 0
   m_Name: Juice (5)
   m_TagString: Juice
@@ -1255,6 +1286,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &495547479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495547473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbd30c278b161a4985a7d664ecbd7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverlScaleFactor: 1.5
+  hoverSpeed: 2
 --- !u!1 &542636256
 GameObject:
   m_ObjectHideFlags: 0
@@ -2607,6 +2652,7 @@ GameObject:
   - component: {fileID: 643843867}
   - component: {fileID: 643843866}
   - component: {fileID: 643843865}
+  - component: {fileID: 643843869}
   m_Layer: 0
   m_Name: Rokok (6)
   m_TagString: Rokok
@@ -2766,6 +2812,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &643843869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643843863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbd30c278b161a4985a7d664ecbd7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverlScaleFactor: 1.5
+  hoverSpeed: 2
 --- !u!1 &757508939
 GameObject:
   m_ObjectHideFlags: 0
@@ -3143,6 +3203,7 @@ GameObject:
   - component: {fileID: 907009683}
   - component: {fileID: 907009682}
   - component: {fileID: 907009681}
+  - component: {fileID: 907009685}
   m_Layer: 0
   m_Name: Mie (4)
   m_TagString: Juice
@@ -3302,6 +3363,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &907009685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907009679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbd30c278b161a4985a7d664ecbd7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverlScaleFactor: 1.5
+  hoverSpeed: 2
 --- !u!4 &910688090 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7481620914282780197, guid: 570cde04c9cf07b4b806f81ec329aab2, type: 3}
@@ -3491,6 +3566,7 @@ GameObject:
   - component: {fileID: 996263218}
   - component: {fileID: 996263217}
   - component: {fileID: 996263216}
+  - component: {fileID: 996263220}
   m_Layer: 0
   m_Name: Juice (6)
   m_TagString: Juice
@@ -3650,6 +3726,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &996263220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996263214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbd30c278b161a4985a7d664ecbd7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverlScaleFactor: 1.5
+  hoverSpeed: 2
 --- !u!1 &1068428241
 GameObject:
   m_ObjectHideFlags: 0
@@ -3707,6 +3797,7 @@ GameObject:
   - component: {fileID: 1091741676}
   - component: {fileID: 1091741675}
   - component: {fileID: 1091741674}
+  - component: {fileID: 1091741678}
   m_Layer: 0
   m_Name: Juice (3)
   m_TagString: Juice
@@ -3866,6 +3957,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1091741678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091741672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbd30c278b161a4985a7d664ecbd7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverlScaleFactor: 1.5
+  hoverSpeed: 2
 --- !u!1 &1109019883
 GameObject:
   m_ObjectHideFlags: 0
@@ -3879,6 +3984,7 @@ GameObject:
   - component: {fileID: 1109019887}
   - component: {fileID: 1109019886}
   - component: {fileID: 1109019885}
+  - component: {fileID: 1109019889}
   m_Layer: 0
   m_Name: Rokok (2)
   m_TagString: Rokok
@@ -4038,6 +4144,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1109019889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109019883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbd30c278b161a4985a7d664ecbd7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverlScaleFactor: 1.5
+  hoverSpeed: 2
 --- !u!1 &1126289670
 GameObject:
   m_ObjectHideFlags: 0
@@ -4308,6 +4428,7 @@ GameObject:
   - component: {fileID: 1163946898}
   - component: {fileID: 1163946897}
   - component: {fileID: 1163946896}
+  - component: {fileID: 1163946900}
   m_Layer: 0
   m_Name: Rokok (8)
   m_TagString: Rokok
@@ -4467,6 +4588,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1163946900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163946894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbd30c278b161a4985a7d664ecbd7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverlScaleFactor: 1.5
+  hoverSpeed: 2
 --- !u!1 &1206625357
 GameObject:
   m_ObjectHideFlags: 0
@@ -4647,6 +4782,7 @@ GameObject:
   - component: {fileID: 1338843247}
   - component: {fileID: 1338843246}
   - component: {fileID: 1338843245}
+  - component: {fileID: 1338843249}
   m_Layer: 0
   m_Name: Mie (6)
   m_TagString: Juice
@@ -4806,6 +4942,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1338843249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338843243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbd30c278b161a4985a7d664ecbd7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverlScaleFactor: 1.5
+  hoverSpeed: 2
 --- !u!1 &1566159463
 GameObject:
   m_ObjectHideFlags: 0
@@ -4819,6 +4969,7 @@ GameObject:
   - component: {fileID: 1566159467}
   - component: {fileID: 1566159466}
   - component: {fileID: 1566159465}
+  - component: {fileID: 1566159469}
   m_Layer: 0
   m_Name: Mie (5)
   m_TagString: Juice
@@ -4978,6 +5129,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1566159469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566159463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbd30c278b161a4985a7d664ecbd7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverlScaleFactor: 1.5
+  hoverSpeed: 2
 --- !u!1 &1677320271
 GameObject:
   m_ObjectHideFlags: 0
@@ -5890,6 +6055,7 @@ GameObject:
   - component: {fileID: 1880985277}
   - component: {fileID: 1880985276}
   - component: {fileID: 1880985275}
+  - component: {fileID: 1880985279}
   m_Layer: 0
   m_Name: Rokok (7)
   m_TagString: Rokok
@@ -6049,6 +6215,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1880985279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880985273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbd30c278b161a4985a7d664ecbd7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverlScaleFactor: 1.5
+  hoverSpeed: 2
 --- !u!1 &1940822989
 GameObject:
   m_ObjectHideFlags: 0
