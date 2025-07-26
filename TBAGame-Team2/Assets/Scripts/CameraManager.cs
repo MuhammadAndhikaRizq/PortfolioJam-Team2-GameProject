@@ -15,7 +15,7 @@ public class CameraManager : MonoBehaviour
 
     public void TriggerZoom()
     {
-        Debug.Log("Ke Panggill");
+        Debug.Log("Ke Panggil");
         zoomCamera.Priority = 20;
         isZoomed = true;
     }
@@ -28,14 +28,14 @@ public class CameraManager : MonoBehaviour
 
 
     // Update is called once per frame
-    // void Update()
-    // {
-    //     if (Input.GetKeyDown(KeyCode.Z))
-    //         TriggerZoom();
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+            TriggerZoom();
 
-    //     if (Input.GetKeyDown(KeyCode.X))
-    //         ResetZoom();
-    // }
+        if (Input.GetKeyDown(KeyCode.X))
+            ResetZoom();
+    }
 
     void AutoZoom()
     {
