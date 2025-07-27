@@ -8,8 +8,11 @@ public class NPCController : MonoBehaviour
 {
     [LabelText("Possible Orders")]
     public NPCOrderData[] possibleOrders;
-    [ReadOnly, ShowInInspector]public Flowchart currentFlowchart;
+    [LabelText("SecondOrder")]
+    public NPCOrderData[] secondOrder;
+    [ReadOnly, ShowInInspector] public Flowchart currentFlowchart;
     [ReadOnly, ShowInInspector] public NPCOrderData currentOrder;
+    [ReadOnly, ShowInInspector] public NPCOrderData currentSecondOrder;
     public CameraManager cameraManager;
     public bool isOrderCompleted;
 

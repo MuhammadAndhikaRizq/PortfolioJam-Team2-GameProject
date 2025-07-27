@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3146341597812649466}
   - component: {fileID: 7096275181992368591}
   - component: {fileID: 6520992191284755015}
+  - component: {fileID: 8078205346558518190}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -102,11 +103,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleOrders:
-  - {fileID: 11400000, guid: e975e153d34caf24e894cf9dae0b5621, type: 2}
-  - {fileID: 11400000, guid: bd1499ae35eede246b26bd97642b7c22, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 11400000, guid: e886c983be4733746b6fda2d96d680e5, type: 2}
+  secondOrder:
+  - {fileID: 11400000, guid: 8d2acbaf42dbb464faf563bf87231c12, type: 2}
   currentFlowchart: {fileID: 0}
   currentOrder: {fileID: 0}
+  currentSecondOrder: {fileID: 0}
+  cameraManager: {fileID: 0}
   isOrderCompleted: 0
 --- !u!114 &4733151410152270930
 MonoBehaviour:
@@ -120,8 +125,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22a547eb068f0ff418cc4592598c404e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flowchart: {fileID: 0}
-  npcController: {fileID: 2876480636857281439}
+  itemSelection: {fileID: 0}
+  rokok: 0
+  aqua: 0
+  mie: 0
+  maxItemCount: 0
+  itemCount: 0
 --- !u!70 &3146341597812649466
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -203,3 +212,17 @@ MonoBehaviour:
   portraitsFace: 0
   setSayDialog: {fileID: 975877337781816275, guid: a6bcad4a7cd9e7d4eb0cb5ee8709b94c, type: 3}
   description: 
+--- !u!114 &8078205346558518190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7129110114616451479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65bea35f58a2f14c9d6d86347e617db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstOrderCompleted: 0
+  secondOrderCompleted: 0

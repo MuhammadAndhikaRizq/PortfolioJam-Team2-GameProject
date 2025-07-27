@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b113cde2106322e439bc3d5dfd72c93a, type: 3}
   m_Name: Test
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Aqua
   itemIcon: {fileID: 0}
   itemDescription: 
   itemPrice: 0
