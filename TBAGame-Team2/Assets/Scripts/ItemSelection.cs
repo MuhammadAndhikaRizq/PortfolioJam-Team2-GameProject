@@ -26,7 +26,7 @@ public class ItemSelection : MonoBehaviour
 
     private void InputSystem()
     {
-        
+        if (DialogueManager.isDialogueActive) return; // Disable drag saat Fungus aktif
 
         if (Input.GetMouseButtonDown(0))
         {
