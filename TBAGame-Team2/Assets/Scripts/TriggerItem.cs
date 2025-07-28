@@ -11,12 +11,19 @@ public class TriggerItem : MonoBehaviour
 
     [BoxGroup("Script Refrence"), SerializeField]
     public ItemSelection itemSelection;
+    [BoxGroup("Script Refrence"), SerializeField]
+    public ItemSelection itemSelection2;
 
-    [FoldoutGroup("Item Counts"), LabelText("Rokok")]
-    public int rokok;
+    [BoxGroup("Script Refrence"), SerializeField]
+    public OrderCheck orderCheck;
 
-    [FoldoutGroup("Item Counts"), LabelText("Aqua")]
-    public int aqua;
+    [FoldoutGroup("Item Counts"), LabelText("Rokok Djarum")]
+    public int rokokDjarum;
+    [FoldoutGroup("Item Counts"), LabelText("Rokok Gudang")]
+    public int rokokGudang;
+
+    [FoldoutGroup("Item Counts"), LabelText("Kopi Kapal")]
+    public int kopiKapal;
 
     [FoldoutGroup("Item Counts"), LabelText("Mie")]
     public int mie;
@@ -27,17 +34,14 @@ public class TriggerItem : MonoBehaviour
     [LabelText("Item Count")]
     public int itemCount = 0;
 
+    [LabelText("NPC Controller Detector")]
+    public GameObject npcControllerDetector;
+
     void Start()
     {
         if (itemSelection == null)
         {
             itemSelection = GetComponent<ItemSelection>();
-        }
-
-        npcController = FindObjectOfType<NPCController>();
-        if (npcController == null)
-        {
-            Debug.LogWarning("NPCController not found in the scene!");
         }
     }
 
@@ -47,13 +51,39 @@ public class TriggerItem : MonoBehaviour
         CollectItem(other);
     }
 
+    void Update()
+    {
+        if (npcController == null) return;
+
+        if (orderCheck != null && orderCheck.firstOrderCompleted && orderCheck.secondOrderCompleted == false)
+            
+            maxItemCount = npcController.currentSecondOrder.quantity;
+
+        else if (orderCheck != null && orderCheck.secondOrderCompleted == true && orderCheck.thirdOrderCompleted == false)
+            maxItemCount = npcController.currentThirdOrder.quantity;
+        else
+            maxItemCount = npcController.currentOrder.quantity;
+    }
+
+    public void SetNPCController(NPCController controller, OrderCheck orderChecker)
+    {
+        npcController = controller;
+        orderCheck = orderChecker;
+    }
+
+    public void ClearNPCController()
+    {
+        npcController = null;
+        orderCheck = null;
+    }
+
     void CollectItem(Collider2D other)
     {
         ItemHolder itemHolder = other.GetComponent<ItemHolder>();
+        itemSelection2 = other.GetComponent<ItemSelection>();
         if (itemHolder == null || npcController == null) return;
 
         NPCOrderData data = npcController.currentOrder;
-        maxItemCount = data.quantity;
 
         if (itemCount < maxItemCount)
         {
@@ -61,11 +91,14 @@ public class TriggerItem : MonoBehaviour
 
             switch (itemData.itemName)
             {
-                case "Rokok":
-                    rokok++;
+                case "RokokDjarum":
+                    rokokDjarum++;
                     break;
-                case "Aqua":
-                    aqua++;
+                case "RokokGudang":
+                    rokokGudang++;
+                    break;
+                case "KopiKapal":
+                    kopiKapal++;
                     break;
                 case "Mie":
                     mie++;
@@ -73,10 +106,11 @@ public class TriggerItem : MonoBehaviour
                 default:
                     return;
             }
+            itemSelection2.ResetPosition();
 
             itemCount++;
-            Destroy(other.gameObject);
-            Debug.Log("Item collected: " + itemData.itemName);
+            
+            Debug.Log("Item collected: " + itemSelection2.name);
         }
 
         if (itemCount >= maxItemCount)
@@ -90,5 +124,16 @@ public class TriggerItem : MonoBehaviour
                 itemSelection.enabled = false;
             }
         }
+    }
+
+    public void ResetPlastic()
+    {
+        rokokDjarum = 0;
+        rokokGudang = 0;
+        kopiKapal = 0;
+        mie = 0;
+        itemCount = 0;
+        itemSelection.ResetPosition();
+        itemSelection.enabled = false;
     }
 }

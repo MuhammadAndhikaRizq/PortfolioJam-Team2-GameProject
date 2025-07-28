@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b113cde2106322e439bc3d5dfd72c93a, type: 3}
-  m_Name: Test2
+  m_Name: RokokGudang
   m_EditorClassIdentifier: 
-  itemName: Rokok
+  itemName: RokokGudang
   itemIcon: {fileID: 0}
   itemDescription: 
   itemPrice: 0

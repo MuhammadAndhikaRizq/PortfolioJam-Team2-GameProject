@@ -60,6 +60,7 @@ public class ItemSelection : MonoBehaviour
 
     public void ResetPosition()
     {
+        isDragging = false;
         transform.position = startPosition;
     }
 }
