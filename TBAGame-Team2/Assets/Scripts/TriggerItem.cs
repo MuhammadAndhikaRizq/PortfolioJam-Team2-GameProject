@@ -25,8 +25,8 @@ public class TriggerItem : MonoBehaviour
     [FoldoutGroup("Item Counts"), LabelText("Kopi Kapal")]
     public int kopiKapal;
 
-    [FoldoutGroup("Item Counts"), LabelText("Mie")]
-    public int mie;
+    [FoldoutGroup("Item Counts"), LabelText("ABCSusu")]
+    public int abcSusu;
 
     [LabelText("Maksimum Item Count")]
     public int maxItemCount;
@@ -100,8 +100,8 @@ public class TriggerItem : MonoBehaviour
                 case "KopiKapal":
                     kopiKapal++;
                     break;
-                case "Mie":
-                    mie++;
+                case "ABCSusu":
+                    abcSusu++;
                     break;
                 default:
                     return;
@@ -131,7 +131,7 @@ public class TriggerItem : MonoBehaviour
         rokokDjarum = 0;
         rokokGudang = 0;
         kopiKapal = 0;
-        mie = 0;
+        abcSusu = 0;
         itemCount = 0;
         itemSelection.ResetPosition();
         itemSelection.enabled = false;

@@ -10,6 +10,8 @@ public class CameraManager : MonoBehaviour
     public CinemachineVirtualCamera zoomCamera;
 
     public Flowchart flowchart;
+    public GameObject UiHelp;
+    public GameObject menuUI;
 
     public bool isZoomed = false;
 
@@ -35,6 +37,15 @@ public class CameraManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X))
             ResetZoom();
+        if (isZoomed)
+        {
+            UiHelp.SetActive(false);
+            menuUI.SetActive(false);
+        }
+        else
+        {
+            menuUI.SetActive(true);
+        }
     }
 
     void AutoZoom()
