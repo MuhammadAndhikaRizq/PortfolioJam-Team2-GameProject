@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,994 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 3080
+        width: 316
+        height: 1002
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae57e25d487f71a43ab97f6e37fca7e7
+      internalID: -632067878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_1
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 3084
+        width: 316
+        height: 1002
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff42a88d27e7cb419af8e82acdf331c
+      internalID: -2121167815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_2
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 3086
+        width: 316
+        height: 1002
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ad11fbd54887f428e2a8e0a3c0768c
+      internalID: -304509838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_3
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 3086
+        width: 316
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bae7770ff1164d488400f04a664092f
+      internalID: -1090103235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_4
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 3088
+        width: 314
+        height: 998
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5385f09d9f1cef4190505883d6bbda4
+      internalID: -269655323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_5
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 3092
+        width: 314
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b3c4bd1f90e194296951e1da82ca01
+      internalID: -89782193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_6
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 3094
+        width: 314
+        height: 996
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60ef9e5144428a4b8f1c156bd2d9cac
+      internalID: 1931124198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_7
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 3094
+        width: 312
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0cd94d8f316b084a8340bd43cd10f31
+      internalID: 307463629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_8
+      rect:
+        serializedVersion: 2
+        x: 2594
+        y: 3096
+        width: 312
+        height: 990
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f7c2b54e9f0a749b56bdc52d96f30f
+      internalID: 253350242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_9
+      rect:
+        serializedVersion: 2
+        x: 2914
+        y: 3096
+        width: 312
+        height: 990
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a003b02b1e8d1064cb7638cabc6dfceb
+      internalID: -1495341900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_10
+      rect:
+        serializedVersion: 2
+        x: 3236
+        y: 3098
+        width: 312
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba1378e50fdc55408c8ecb86747da58
+      internalID: -195819998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_11
+      rect:
+        serializedVersion: 2
+        x: 3554
+        y: 3100
+        width: 314
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d94875e9af38b841bfca675a17830c5
+      internalID: 1697884904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_12
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 2056
+        width: 316
+        height: 1002
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62f9e3ae4ec8aa47bc4e0de37b0f1ac
+      internalID: -1974774532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_13
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 2064
+        width: 316
+        height: 1002
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a49651468b85924990ee1661537701d
+      internalID: 1282116039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_14
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 2066
+        width: 316
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a565d5a63b603ac47984f280bf1401b8
+      internalID: 494561161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_15
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 2072
+        width: 316
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20dc2cecdf06c1645a67cedc79e2010f
+      internalID: 1730967441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_16
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 2078
+        width: 314
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c9102e7a1e3094482b93036093ff1f
+      internalID: 2097880535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_17
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 2078
+        width: 316
+        height: 998
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01bfb5980785c9b4da4f4edec85fbb89
+      internalID: 268314661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_18
+      rect:
+        serializedVersion: 2
+        x: 1954
+        y: 2086
+        width: 314
+        height: 990
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0412e2026e9fedf4bb5f66a030b739bb
+      internalID: -1821578670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_19
+      rect:
+        serializedVersion: 2
+        x: 2276
+        y: 2086
+        width: 312
+        height: 990
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff38582e23042f468b0cdf1acc8b4fd
+      internalID: 909322502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_20
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 2088
+        width: 314
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d94a31b68174f459e3319e19ab4b66
+      internalID: -829433638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_21
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 2092
+        width: 312
+        height: 990
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e254f32625b514dbf9e8830db14d0e
+      internalID: 367402078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_22
+      rect:
+        serializedVersion: 2
+        x: 3242
+        y: 2094
+        width: 312
+        height: 990
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19062e61271129d449f01b64a2cf7a25
+      internalID: -2082653663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_23
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 2100
+        width: 312
+        height: 990
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8341064c61cf4c439c035b29a1c1f25
+      internalID: -1374002791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_24
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1034
+        width: 316
+        height: 1002
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f521ced4d300a724d9fb938dbc058c32
+      internalID: 676744644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_25
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1044
+        width: 316
+        height: 1002
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505a5734979ad3841be29664bf690fc3
+      internalID: 115133358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_26
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 1046
+        width: 316
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36489c08e7acaff4594576559308ea3f
+      internalID: -657455671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_27
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 1052
+        width: 316
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7b1251484537043970b442c27e9c83
+      internalID: 675843678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_28
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 1060
+        width: 314
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf0a6b08ec100b4d8eeafa5a7cdc9ec
+      internalID: 753302812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_29
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 1068
+        width: 312
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b706fd471442ac488fa2ba492f7c21c
+      internalID: -1395460149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_30
+      rect:
+        serializedVersion: 2
+        x: 1958
+        y: 1078
+        width: 312
+        height: 990
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1362c67c4b1df34086d3f22681f087b
+      internalID: 1179081997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_31
+      rect:
+        serializedVersion: 2
+        x: 2280
+        y: 1078
+        width: 314
+        height: 998
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0e70a6972641f4aaf456f4e86cde0e
+      internalID: 32611800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_32
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 1082
+        width: 312
+        height: 990
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05bb76250b86b854c9d8f84ed1f02838
+      internalID: -1246457199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_33
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 1088
+        width: 312
+        height: 990
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c160fb88a6b958b479198ee4c91c87df
+      internalID: -1154155751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_34
+      rect:
+        serializedVersion: 2
+        x: 3248
+        y: 1092
+        width: 314
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5633d42dd3b5de14493d9f2b65ea1d4f
+      internalID: 1639232078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_35
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 12
+        width: 316
+        height: 1002
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee3f1878e601a44996c6cce4dd9e7dc
+      internalID: 467290634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_36
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 14
+        width: 316
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe9426e7097c432419f3fe636bad62d5
+      internalID: -122337928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_37
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 28
+        width: 316
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ab407ed30fb674db7fd26efd345209
+      internalID: 947071787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_38
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 30
+        width: 314
+        height: 996
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9bf4ffca6091240866c65f7f68a4fd
+      internalID: 1301586679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_39
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 34
+        width: 316
+        height: 1002
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705fee737685591498c8f3d2da46b707
+      internalID: -1943056020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_40
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 48
+        width: 316
+        height: 998
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18290c39debd554f809749b6dd3ad8a
+      internalID: -991303013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_41
+      rect:
+        serializedVersion: 2
+        x: 1948
+        y: 60
+        width: 312
+        height: 990
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 226f14d7500a5a043b5d909e2224e300
+      internalID: 1423188898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_42
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 70
+        width: 314
+        height: 996
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b94e1150ef06ca4fa29e08bfdd34e25
+      internalID: 1847819521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_43
+      rect:
+        serializedVersion: 2
+        x: 2594
+        y: 72
+        width: 314
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcadf150e898954e893eb7177ef67d9
+      internalID: -898685979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_44
+      rect:
+        serializedVersion: 2
+        x: 2916
+        y: 76
+        width: 314
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9812037124af4724987bc118be340386
+      internalID: 740044849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_45
+      rect:
+        serializedVersion: 2
+        x: 3236
+        y: 82
+        width: 316
+        height: 998
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf1e9615cb60bc43b9e7c71339fc8d2
+      internalID: -113128659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 1 (Angry lv 2)_46
+      rect:
+        serializedVersion: 2
+        x: 3562
+        y: 94
+        width: 312
+        height: 990
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0526041de5b83484289cec4a7c17e77e
+      internalID: -1077634525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +1106,54 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Char 1 (Angry lv 2)_0: -632067878
+      Char 1 (Angry lv 2)_1: -2121167815
+      Char 1 (Angry lv 2)_10: -195819998
+      Char 1 (Angry lv 2)_11: 1697884904
+      Char 1 (Angry lv 2)_12: -1974774532
+      Char 1 (Angry lv 2)_13: 1282116039
+      Char 1 (Angry lv 2)_14: 494561161
+      Char 1 (Angry lv 2)_15: 1730967441
+      Char 1 (Angry lv 2)_16: 2097880535
+      Char 1 (Angry lv 2)_17: 268314661
+      Char 1 (Angry lv 2)_18: -1821578670
+      Char 1 (Angry lv 2)_19: 909322502
+      Char 1 (Angry lv 2)_2: -304509838
+      Char 1 (Angry lv 2)_20: -829433638
+      Char 1 (Angry lv 2)_21: 367402078
+      Char 1 (Angry lv 2)_22: -2082653663
+      Char 1 (Angry lv 2)_23: -1374002791
+      Char 1 (Angry lv 2)_24: 676744644
+      Char 1 (Angry lv 2)_25: 115133358
+      Char 1 (Angry lv 2)_26: -657455671
+      Char 1 (Angry lv 2)_27: 675843678
+      Char 1 (Angry lv 2)_28: 753302812
+      Char 1 (Angry lv 2)_29: -1395460149
+      Char 1 (Angry lv 2)_3: -1090103235
+      Char 1 (Angry lv 2)_30: 1179081997
+      Char 1 (Angry lv 2)_31: 32611800
+      Char 1 (Angry lv 2)_32: -1246457199
+      Char 1 (Angry lv 2)_33: -1154155751
+      Char 1 (Angry lv 2)_34: 1639232078
+      Char 1 (Angry lv 2)_35: 467290634
+      Char 1 (Angry lv 2)_36: -122337928
+      Char 1 (Angry lv 2)_37: 947071787
+      Char 1 (Angry lv 2)_38: 1301586679
+      Char 1 (Angry lv 2)_39: -1943056020
+      Char 1 (Angry lv 2)_4: -269655323
+      Char 1 (Angry lv 2)_40: -991303013
+      Char 1 (Angry lv 2)_41: 1423188898
+      Char 1 (Angry lv 2)_42: 1847819521
+      Char 1 (Angry lv 2)_43: -898685979
+      Char 1 (Angry lv 2)_44: 740044849
+      Char 1 (Angry lv 2)_45: -113128659
+      Char 1 (Angry lv 2)_46: -1077634525
+      Char 1 (Angry lv 2)_5: -89782193
+      Char 1 (Angry lv 2)_6: 1931124198
+      Char 1 (Angry lv 2)_7: 307463629
+      Char 1 (Angry lv 2)_8: 253350242
+      Char 1 (Angry lv 2)_9: -1495341900
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
