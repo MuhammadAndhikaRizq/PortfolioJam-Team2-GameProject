@@ -108,7 +108,763 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)00
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 1062
+        width: 358
+        height: 1009
+      alignment: 9
+      pivot: {x: 0.4944134, y: 0.49603567}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1b498f1f3108d44a50b504b4f0a009
+      internalID: 1563684516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)01
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 1058
+        width: 358
+        height: 1010
+      alignment: 9
+      pivot: {x: 0.4944134, y: 0.49554455}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b634b33c86a9e4eab616b1f36b6691
+      internalID: 382084201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)02
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 3084
+        width: 357
+        height: 1011
+      alignment: 9
+      pivot: {x: 0.49579832, y: 0.49703264}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05420b179a14be6458d0d3261bad2b6a
+      internalID: 710428753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)03
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 3081
+        width: 359
+        height: 1014
+      alignment: 9
+      pivot: {x: 0.4930362, y: 0.49556214}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a8cef49997b1ec489596b3dbb035a43
+      internalID: 737154280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)04
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1046
+        width: 359
+        height: 1014
+      alignment: 9
+      pivot: {x: 0.4902507, y: 0.49358973}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cbebff823eda244ba9d8d3242812665
+      internalID: -831608097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)05
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 2065
+        width: 353
+        height: 1014
+      alignment: 9
+      pivot: {x: 0.47875354, y: 0.4985207}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ae8bd19f3c286478ccd1ebb3e83032
+      internalID: 1877321049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)06
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 1064
+        width: 350
+        height: 1008
+      alignment: 9
+      pivot: {x: 0.48285714, y: 0.4955357}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c2f8035b810bc44853cdce827a2861
+      internalID: -901963035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)07
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 2067
+        width: 355
+        height: 1012
+      alignment: 9
+      pivot: {x: 0.48169014, y: 0.49357706}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b5e1bb43cb57d448b74b609a2f4b59
+      internalID: 1861337471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)08
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 3083
+        width: 353
+        height: 1012
+      alignment: 9
+      pivot: {x: 0.47875354, y: 0.49950594}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f96436027dba94bb49e2e4d49e3566
+      internalID: -1353116060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)09
+      rect:
+        serializedVersion: 2
+        x: 2506
+        y: 1074
+        width: 353
+        height: 1004
+      alignment: 9
+      pivot: {x: 0.47875354, y: 0.49750996}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6f01aeea3600b4e8220b087496450c
+      internalID: 454141806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)10
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 2077
+        width: 350
+        height: 1008
+      alignment: 9
+      pivot: {x: 0.48285714, y: 0.4955357}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfcecbd7b7e5a654bba3462943a37c62
+      internalID: -607619143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)11
+      rect:
+        serializedVersion: 2
+        x: 2848
+        y: 3094
+        width: 349
+        height: 1001
+      alignment: 9
+      pivot: {x: 0.48424068, y: 0.499001}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32cb80c491a212a41bd5c07a4c7eb3de
+      internalID: 2037320527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 30
+        width: 353
+        height: 1014
+      alignment: 9
+      pivot: {x: 0.47875354, y: 0.4985207}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2e13fca631126b4aabe2b6aab03936c
+      internalID: 394100287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)13
+      rect:
+        serializedVersion: 2
+        x: 2497
+        y: 3090
+        width: 349
+        height: 1005
+      alignment: 9
+      pivot: {x: 0.48424068, y: 0.50298506}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 163bafeaf618e3e41884b6af396df949
+      internalID: -317116980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)14
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2062
+        width: 352
+        height: 1015
+      alignment: 9
+      pivot: {x: 0.48011363, y: 0.49802956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f0c0cb9dddc3854dbabc54e95f5ef65
+      internalID: 1325377237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)15
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 2074
+        width: 352
+        height: 1009
+      alignment: 9
+      pivot: {x: 0.48295453, y: 0.5009911}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba316320ab2de364b93ff29dc38cef12
+      internalID: 776902718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)16
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 3085
+        width: 353
+        height: 1010
+      alignment: 9
+      pivot: {x: 0.4815864, y: 0.5004951}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c7e78cb48eced4a900355ab0317e72
+      internalID: 1855887320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)17
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 37
+        width: 352
+        height: 1012
+      alignment: 9
+      pivot: {x: 0.48295453, y: 0.49950594}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e3e62ae0e654e04f8708e82019cfaab
+      internalID: 1687392894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)18
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 40
+        width: 352
+        height: 1011
+      alignment: 9
+      pivot: {x: 0.48011363, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b958ecacea9bb0540b26d43e258cd8e1
+      internalID: -1036972165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)19
+      rect:
+        serializedVersion: 2
+        x: 2149
+        y: 1069
+        width: 355
+        height: 1006
+      alignment: 9
+      pivot: {x: 0.47605634, y: 0.5024851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81f2299c112d1145965505e29eb9ea3
+      internalID: 843779557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)20
+      rect:
+        serializedVersion: 2
+        x: 2487
+        y: 2080
+        width: 352
+        height: 1005
+      alignment: 9
+      pivot: {x: 0.48011363, y: 0.50298506}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2126913353d11046abe9ac8c46e1684
+      internalID: 1236758546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)21
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 2073
+        width: 352
+        height: 1010
+      alignment: 9
+      pivot: {x: 0.48011363, y: 0.5004951}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c51e2166c8e79c47be56613c677d312
+      internalID: 697386495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)22
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 71
+        width: 349
+        height: 1001
+      alignment: 9
+      pivot: {x: 0.48424068, y: 0.499001}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424835ef9b12b254f8117d508f4cee05
+      internalID: -984857290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)23
+      rect:
+        serializedVersion: 2
+        x: 2487
+        y: 62
+        width: 349
+        height: 1005
+      alignment: 9
+      pivot: {x: 0.48424068, y: 0.49701494}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c6ed6c584819e0418e2981655cf5517
+      internalID: -1788876164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)24
+      rect:
+        serializedVersion: 2
+        x: 2841
+        y: 2084
+        width: 351
+        height: 1004
+      alignment: 9
+      pivot: {x: 0.4814815, y: 0.49750996}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af4598546c68484abc970af104d63e3
+      internalID: 97755714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)25
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3079
+        width: 349
+        height: 1016
+      alignment: 9
+      pivot: {x: 0.48424068, y: 0.49753937}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947c0daecbc4096498e4f3d6d98e6b46
+      internalID: 1522135121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)26
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 1053
+        width: 351
+        height: 1012
+      alignment: 9
+      pivot: {x: 0.4871795, y: 0.49950594}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5360302024f8e141adaae8958035fa4
+      internalID: -307255441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)27
+      rect:
+        serializedVersion: 2
+        x: 2145
+        y: 3087
+        width: 350
+        height: 1008
+      alignment: 9
+      pivot: {x: 0.48285714, y: 0.4955357}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766b9de3d115d514b88dedefe8bf63b5
+      internalID: 1839341487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)28
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 55
+        width: 350
+        height: 1007
+      alignment: 9
+      pivot: {x: 0.48285714, y: 0.4960278}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f52d25fd12a9eaf44b200d7c0c2e8a2a
+      internalID: -1427948890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)29
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 30
+        width: 351
+        height: 1014
+      alignment: 9
+      pivot: {x: 0.4814815, y: 0.4985207}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c14b9fd49b4f04b983daa6ed75cfd8
+      internalID: -740179457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)30
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 52
+        width: 356
+        height: 1008
+      alignment: 9
+      pivot: {x: 0.49438202, y: 0.4965278}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b2dc73d815f444f8f277dc0d7297c3
+      internalID: -2005823469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)31
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 3087
+        width: 361
+        height: 1008
+      alignment: 9
+      pivot: {x: 0.4903047, y: 0.4965278}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881549bf56d1ba1478ddb6a4af01334e
+      internalID: -113771348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)32
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 2070
+        width: 358
+        height: 1011
+      alignment: 9
+      pivot: {x: 0.4944134, y: 0.49703264}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 344cd34012ec01e4f8151e5d5584cc6e
+      internalID: 1257312600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)33
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 1051
+        width: 360
+        height: 1012
+      alignment: 9
+      pivot: {x: 0.49166667, y: 0.4965415}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b7b4e5e076a8a4e996a1cad092f9cc
+      internalID: -842590773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)34
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 46
+        width: 358
+        height: 1010
+      alignment: 9
+      pivot: {x: 0.4944134, y: 0.49554455}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c502e8930fb5b4aaa7130471b3589c
+      internalID: 926536271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char 3 (Angry 1)35
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 1062
+        width: 358
+        height: 1009
+      alignment: 9
+      pivot: {x: 0.4944134, y: 0.49603567}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af92902df30c2f84c81f713cb4d3af1e
+      internalID: 1568718122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +875,43 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Char 3 (Angry 1)00: 1563684516
+      Char 3 (Angry 1)01: 382084201
+      Char 3 (Angry 1)02: 710428753
+      Char 3 (Angry 1)03: 737154280
+      Char 3 (Angry 1)04: -831608097
+      Char 3 (Angry 1)05: 1877321049
+      Char 3 (Angry 1)06: -901963035
+      Char 3 (Angry 1)07: 1861337471
+      Char 3 (Angry 1)08: -1353116060
+      Char 3 (Angry 1)09: 454141806
+      Char 3 (Angry 1)10: -607619143
+      Char 3 (Angry 1)11: 2037320527
+      Char 3 (Angry 1)12: 394100287
+      Char 3 (Angry 1)13: -317116980
+      Char 3 (Angry 1)14: 1325377237
+      Char 3 (Angry 1)15: 776902718
+      Char 3 (Angry 1)16: 1855887320
+      Char 3 (Angry 1)17: 1687392894
+      Char 3 (Angry 1)18: -1036972165
+      Char 3 (Angry 1)19: 843779557
+      Char 3 (Angry 1)20: 1236758546
+      Char 3 (Angry 1)21: 697386495
+      Char 3 (Angry 1)22: -984857290
+      Char 3 (Angry 1)23: -1788876164
+      Char 3 (Angry 1)24: 97755714
+      Char 3 (Angry 1)25: 1522135121
+      Char 3 (Angry 1)26: -307255441
+      Char 3 (Angry 1)27: 1839341487
+      Char 3 (Angry 1)28: -1427948890
+      Char 3 (Angry 1)29: -740179457
+      Char 3 (Angry 1)30: -2005823469
+      Char 3 (Angry 1)31: -113771348
+      Char 3 (Angry 1)32: 1257312600
+      Char 3 (Angry 1)33: -842590773
+      Char 3 (Angry 1)34: 926536271
+      Char 3 (Angry 1)35: 1568718122
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

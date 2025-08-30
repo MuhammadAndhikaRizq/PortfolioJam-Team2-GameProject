@@ -4,14 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Laser
-  - Enemy
-  - NPC
-  - Rokok
-  - Juice
+  - Interactible
   - BackgroundNPC
-  - PlasticBag
-  - Item
   layers:
   - Default
   - TransparentFX
@@ -21,11 +15,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Enemy
+  - Player
+  - InspectObject
+  - PostProcessing
   - 
   - 
   - 
@@ -50,32 +44,11 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Background
-    uniqueID: 3573425125
+    uniqueID: 1802038029
     locked: 0
-  - name: Background NPC
-    uniqueID: 3444251913
+  - name: New Layer 2
+    uniqueID: 3162851837
     locked: 0
-  - name: Background 1
-    uniqueID: 781513111
-    locked: 0
-  - name: NPC
-    uniqueID: 3340926971
-    locked: 0
-  - name: Foreground
-    uniqueID: 1957405835
-    locked: 0
-  - name: Background2
-    uniqueID: 2487915323
-    locked: 0
-  - name: Environment
-    uniqueID: 1827687781
-    locked: 0
-  - name: Item
-    uniqueID: 2055234291
-    locked: 0
-  - name: UI
-    uniqueID: 767724115
-    locked: 0
-  - name: UI2
-    uniqueID: 3969455755
+  - name: New Layer 3
+    uniqueID: 1972644655
     locked: 0

@@ -1,0 +1,35 @@
+version: 2
+tpsheetFileNames:
+- Assets/Assets/Sprites/Character (24fps)/Char 1 (Angry lv 1)/1.png.tpsheet
+- Assets/Assets/Sprites/Character (24fps)/Char 1 (Angry lv2)/Char 1 (Angry lv 2).tpsheet
+- Assets/Assets/Sprites/Character (24fps)/Char 1 (normal)/Char 1 (normal).tpsheet
+- Assets/Assets/Sprites/Character (24fps)/Char 2(Angry lv1)/Char 2(Angry lv1).tpsheet
+- Assets/Assets/Sprites/Character (24fps)/Char 2(Angry lv2)/Char 2(Angry lv2).tpsheet
+- Assets/Assets/Sprites/Character (24fps)/Char 2(normal)/Char 2(normal).tpsheet
+- Assets/Assets/Sprites/Character (24fps)/Char 3 (Angry 2)/Char 3 (Angry 2).tpsheet
+- Assets/Assets/Sprites/Character (24fps)/Char 3(Angry lv1)/Char 3(Angry lv1).tpsheet
+- Assets/Assets/Sprites/Character (24fps)/Char 3(Normal)/Char 3(Normal).tpsheet
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
+textureFileNames:
+- Assets/Assets/Sprites/Character (24fps)/Char 1 (Angry lv 1)/1.png.png
+- Assets/Assets/Sprites/Character (24fps)/Char 1 (Angry lv2)/Char 1 (Angry lv 2).png
+- Assets/Assets/Sprites/Character (24fps)/Char 1 (normal)/Char 1 (normal).png
+- Assets/Assets/Sprites/Character (24fps)/Char 2(Angry lv1)/Char 2(Angry lv1).png
+- Assets/Assets/Sprites/Character (24fps)/Char 2(Angry lv2)/Char 2(Angry lv2).png
+- Assets/Assets/Sprites/Character (24fps)/Char 2(normal)/Char 2(normal).png
+- Assets/Assets/Sprites/Character (24fps)/Char 3 (Angry 2)/Char 3 (Angry 2).png
+- Assets/Assets/Sprites/Character (24fps)/Char 3(Angry lv1)/Char 3(Angry lv1).png
+- Assets/Assets/Sprites/Character (24fps)/Char 3(Normal)/Char 3(Normal).png
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.png
+normalmapFileNames:
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+enableDebugOutput: 0

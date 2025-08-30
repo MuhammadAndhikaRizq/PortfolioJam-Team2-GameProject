@@ -10,9 +10,7 @@ public class NPCSpawnManager : MonoBehaviour
 
     GameObject currentNPC;
 
-    [Header("Runtime (debug)")]
-    public List<ItemData> orderList = new();
-    public int expectedTotal;
+    
     // Start is called before the first frame update
 
     void Awake()
