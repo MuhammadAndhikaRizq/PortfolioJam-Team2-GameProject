@@ -10,6 +10,7 @@ public class npcController : MonoBehaviour
 {
     [Header("Data")]
     public List<ItemData> menuPool;
+    public List<Image> orderDisplay;
     public NPCData data;
     [Header("Patience")]
     [SerializeField] Slider patienceBar;
@@ -27,6 +28,7 @@ public class npcController : MonoBehaviour
     {
         patience = data.maxPatienceBarValue;
         MakeOrder();
+        ShowOrder();
     }
 
     void Update()
@@ -79,6 +81,22 @@ public class npcController : MonoBehaviour
             orderList.Add(menuPool[Random.Range(0, menuPool.Count)]);
             expectedTotal = orderList.Sum(i => i.itemPrice); // tes doang
         }
-       
+
+    }
+
+    void ShowOrder()
+    {
+        int shown = Mathf.Min(orderList.Count, orderDisplay.Count);
+
+        for (int i = 0; i < shown; i++)
+        {
+            orderDisplay[i].sprite = orderList[i].itemIcon;
+            orderDisplay[i].gameObject.SetActive(true);
+        }
+        
+        for (int i = shown; i < orderDisplay.Count; i++)
+        {
+            orderDisplay[i].gameObject.SetActive(false);
+        }
     }
 }

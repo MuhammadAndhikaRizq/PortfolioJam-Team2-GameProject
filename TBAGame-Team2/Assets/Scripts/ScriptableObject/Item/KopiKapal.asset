@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: KopiKapal
   m_EditorClassIdentifier: 
   itemName: KopiKapal
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 448441e21a0df7b4993e20457b91d0f7, type: 3}
   itemPrice: 2000
-  itemPrefab: {fileID: 0}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ABCSusu
   m_EditorClassIdentifier: 
   itemName: ABCSusu
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 3b694681bd0877e48913b1579414a88c, type: 3}
   itemPrice: 3500
