@@ -1,19 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine.UI;
+using System.Collections;
 
 public class Cashier : MonoBehaviour
 {
     public static Cashier Instance;
-
+    
     [Header("UI References")]
     public GameObject miniGamePanel;
-    public TextMeshProUGUI  displayText;
-    public TextMeshProUGUI  orderSummaryText;
-    public TextMeshProUGUI  paymentText;
-    public TextMeshProUGUI  changeText;
+    public TextMeshProUGUI displayText;
+    public TextMeshProUGUI orderSummaryText;
+    public TextMeshProUGUI paymentText;
+    public TextMeshProUGUI changeText;
     public GameObject numberPad;
     public GameObject cashDrawer;
     public Button confirmButton;
@@ -33,59 +32,93 @@ public class Cashier : MonoBehaviour
     private bool isAddingItems = true;
     
     private Customer currentCustomer;
-    
-    void Awake()
+
+    void Start()
     {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
-        
-        miniGamePanel.SetActive(false);
+        currentCustomer = FindObjectOfType<Customer>();
+
+        if (currentCustomer != null)
+        {
+            // Generate a test order for debugging
+            if (OrderSystem.Instance != null)
+            {
+                Order testOrder = OrderSystem.Instance.GenerateRandomOrder();
+                StartMiniGame(testOrder);
+            }
+            else
+            {
+                Debug.LogError("OrderSystem instance not found!");
+            }
+        }
     }
     
     public void StartMiniGame(Order order)
     {
+        Debug.Log("Starting mini-game with order total: $" + order.TotalPrice);
+
         currentOrder = order;
-        currentCustomer = FindObjectOfType<Customer>(); // Since we have only one customer
-        
+
         // Determine customer payment (ensure it's at least the order total)
-        customerPayment = commonNotes[Random.Range(0, commonNotes.Length)];
-        while (customerPayment < currentOrder.TotalPrice)
+        customerPayment = commonNotes[commonNotes.Length - 1];
+        foreach (int note in commonNotes)
         {
-            customerPayment = commonNotes[Random.Range(0, commonNotes.Length)];
+            if (note >= currentOrder.TotalPrice)
+            {
+                customerPayment = note;
+                break;
+            }
         }
-        
+
         SetupUI();
-        miniGamePanel.SetActive(true);
         ResetCalculator();
     }
     
     void SetupUI()
     {
         // Display order summary
-        orderSummaryText.text = "Order Summary:\n";
+        System.Text.StringBuilder orderSummaryBuilder = new System.Text.StringBuilder();
+        orderSummaryBuilder.Append("Order Summary:\n");
+        
         foreach (OrderItem item in currentOrder.items)
         {
-            orderSummaryText.text += $"{item.quantity}x {item.item.itemName} - ${item.item.itemPrice * item.quantity}\n";
+            orderSummaryBuilder.Append($"{item.quantity}x {item.item.itemName} - ${item.item.itemPrice * item.quantity}\n");
         }
-        orderSummaryText.text += $"\nTotal: ${currentOrder.TotalPrice}";
+        
+        orderSummaryBuilder.Append($"\nTotal: ${currentOrder.TotalPrice}");
+        
+        if (orderSummaryText != null)
+        {
+            orderSummaryText.text = orderSummaryBuilder.ToString();
+        }
         
         // Setup payment info
-        paymentText.text = $"Customer pays: ${customerPayment}";
+        if (paymentText != null)
+            paymentText.text = $"Customer pays: ${customerPayment}";
+            
         changeDue = customerPayment - currentOrder.TotalPrice;
-        changeText.text = $"Change due: ${changeDue}";
+        
+        if (changeText != null)
+            changeText.text = $"Change due: ${changeDue}";
         
         // Setup buttons
-        confirmButton.onClick.RemoveAllListeners();
-        confirmButton.onClick.AddListener(OnConfirmTotal);
+        if (confirmButton != null)
+        {
+            confirmButton.onClick.RemoveAllListeners();
+            confirmButton.onClick.AddListener(OnConfirmTotal);
+        }
         
-        giveChangeButton.onClick.RemoveAllListeners();
-        giveChangeButton.onClick.AddListener(OnGiveChange);
+        if (giveChangeButton != null)
+        {
+            giveChangeButton.onClick.RemoveAllListeners();
+            giveChangeButton.onClick.AddListener(OnGiveChange);
+        }
         
         // Initially hide cash drawer
-        cashDrawer.SetActive(false);
-        giveChangeButton.gameObject.SetActive(false);
+        if (cashDrawer != null)
+            cashDrawer.SetActive(false);
+            
+        if (giveChangeButton != null)
+            giveChangeButton.gameObject.SetActive(false);
     }
     
     void ResetCalculator()
@@ -133,13 +166,16 @@ public class Cashier : MonoBehaviour
     
     void UpdateDisplay()
     {
-        if (!string.IsNullOrEmpty(currentInput))
+        if (displayText != null)
         {
-            displayText.text = currentInput;
-        }
-        else
-        {
-            displayText.text = calculatedTotal.ToString();
+            if (!string.IsNullOrEmpty(currentInput))
+            {
+                displayText.text = currentInput;
+            }
+            else
+            {
+                displayText.text = calculatedTotal.ToString();
+            }
         }
     }
     
@@ -148,14 +184,14 @@ public class Cashier : MonoBehaviour
         if (calculatedTotal == currentOrder.TotalPrice)
         {
             // Correct total - proceed to payment phase
-            numberPad.SetActive(false);
-            cashDrawer.SetActive(true);
-            giveChangeButton.gameObject.SetActive(true);
+            if (numberPad != null) numberPad.SetActive(false);
+            if (cashDrawer != null) cashDrawer.SetActive(true);
+            if (giveChangeButton != null) giveChangeButton.gameObject.SetActive(true);
         }
         else
         {
             // Incorrect total - provide feedback
-            displayText.text = "Incorrect! Try again";
+            if (displayText != null) displayText.text = "Incorrect! Try again";
             StartCoroutine(ResetAfterDelay(2f));
         }
     }
@@ -163,7 +199,8 @@ public class Cashier : MonoBehaviour
     public void OnDenominationSelected(int value)
     {
         selectedChange += value;
-        changeText.text = $"Change due: ${changeDue}\nSelected: ${selectedChange}";
+        if (changeText != null)
+            changeText.text = $"Change due: ${changeDue}\nSelected: ${selectedChange}";
     }
     
     void OnGiveChange()
@@ -172,7 +209,7 @@ public class Cashier : MonoBehaviour
         {
             // Correct change given
             Debug.Log("Transaction completed successfully!");
-            miniGamePanel.SetActive(false);
+            if (miniGamePanel != null) miniGamePanel.SetActive(false);
             
             // Notify customer of successful transaction
             if (currentCustomer != null)
@@ -183,7 +220,8 @@ public class Cashier : MonoBehaviour
         else
         {
             // Incorrect change - provide feedback
-            changeText.text = $"Incorrect change! Try again\nDue: ${changeDue}, Selected: ${selectedChange}";
+            if (changeText != null)
+                changeText.text = $"Incorrect change! Try again\nDue: ${changeDue}, Selected: ${selectedChange}";
             selectedChange = 0;
         }
     }
@@ -192,5 +230,23 @@ public class Cashier : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         ResetCalculator();
+    }
+    
+    // For testing - remove in final version
+    void OnGUI()
+    {
+        // Add a test button to hide the mini-game
+        if (GUI.Button(new Rect(10, 10, 150, 30), "Hide Mini-Game"))
+        {
+            if (miniGamePanel != null)
+                miniGamePanel.SetActive(false);
+        }
+        
+        // Add a test button to show the mini-game
+        if (GUI.Button(new Rect(10, 50, 150, 30), "Show Mini-Game"))
+        {
+            if (miniGamePanel != null)
+                miniGamePanel.SetActive(true);
+        }
     }
 }

@@ -45,11 +45,24 @@ public class OrderSystem : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
+            
+        // Ensure we have items to work with
+        if (availableItems == null || availableItems.Length == 0)
+        {
+            Debug.LogError("No available items assigned to OrderSystem!");
+        }
     }
     
     public Order GenerateRandomOrder(int minItems = 1, int maxItems = 5)
     {
         Order order = new Order();
+        
+        if (availableItems == null || availableItems.Length == 0)
+        {
+            Debug.LogError("Cannot generate order - no available items!");
+            return order;
+        }
+        
         int itemCount = Random.Range(minItems, maxItems + 1);
         
         for (int i = 0; i < itemCount; i++)
@@ -75,6 +88,7 @@ public class OrderSystem : MonoBehaviour
             }
         }
         
+        Debug.Log("Generated order with " + order.items.Count + " items. Total: $" + order.TotalPrice);
         return order;
     }
 }

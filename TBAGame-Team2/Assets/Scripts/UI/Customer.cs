@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections;
 
 public class Customer : MonoBehaviour
 {
@@ -35,6 +34,14 @@ public class Customer : MonoBehaviour
         // Set up patience
         currentPatience = npcData.maxPatienceBarValue;
         
+        // Initialize the patience slider
+        if (patienceSlider != null)
+        {
+            patienceSlider.minValue = 0;
+            patienceSlider.maxValue = npcData.maxPatienceBarValue;
+            patienceSlider.value = currentPatience;
+        }
+        
         // Set up thought bubble with order details
         UpdateOrderDisplay();
         
@@ -60,6 +67,10 @@ public class Customer : MonoBehaviour
     
     IEnumerator PatienceCoroutine()
     {
+        // Cache references to avoid repeated function calls
+        Image fillImage = patienceSlider.fillRect.GetComponent<Image>();
+        float maxPatience = npcData.maxPatienceBarValue;
+        
         while (isWaiting && currentPatience > 0 && !orderFulfilled)
         {
             // Decrease patience over time
@@ -71,15 +82,17 @@ public class Customer : MonoBehaviour
                 patienceSlider.value = currentPatience;
                 
                 // Change color based on patience level
-                float patiencePercent = currentPatience / npcData.maxPatienceBarValue;
-                Image fillImage = patienceSlider.fillRect.GetComponent<Image>();
+                float patiencePercent = currentPatience / maxPatience;
                 
-                if (patiencePercent > 0.6f)
-                    fillImage.color = Color.green;
-                else if (patiencePercent > 0.3f)
-                    fillImage.color = Color.yellow;
-                else
-                    fillImage.color = Color.red;
+                if (fillImage != null)
+                {
+                    if (patiencePercent > 0.6f)
+                        fillImage.color = Color.green;
+                    else if (patiencePercent > 0.3f)
+                        fillImage.color = Color.yellow;
+                    else
+                        fillImage.color = Color.red;
+                }
             }
             
             // Check if patience ran out
@@ -89,6 +102,7 @@ public class Customer : MonoBehaviour
                 yield break;
             }
             
+            // Wait until next frame
             yield return null;
         }
     }
@@ -97,8 +111,8 @@ public class Customer : MonoBehaviour
     {
         // Customer gets angry and leaves
         isWaiting = false;
-        spriteRenderer.sprite = angrySprite;
-        thoughtBubble.SetActive(false);
+        if (spriteRenderer != null) spriteRenderer.sprite = angrySprite;
+        if (thoughtBubble != null) thoughtBubble.SetActive(false);
         
         // TODO: Implement negative consequences
         Debug.Log("Customer left angry!");
@@ -113,10 +127,10 @@ public class Customer : MonoBehaviour
         itemsCollected = true;
         
         // Change thought bubble to show readiness for payment
-        orderText.text = "I'm ready to pay!";
+        if (orderText != null) orderText.text = "I'm ready to pay!";
         
         // Change customer appearance to happy
-        spriteRenderer.sprite = happySprite;
+        if (spriteRenderer != null) spriteRenderer.sprite = happySprite;
         
         // Stop patience depletion
         isWaiting = false;
@@ -135,14 +149,21 @@ public class Customer : MonoBehaviour
         }
         
         // Start the cashier mini-game
-        Cashier.Instance.StartMiniGame(order);
+        if (Cashier.Instance != null)
+        {
+            Cashier.Instance.StartMiniGame(order);
+        }
+        else
+        {
+            Debug.LogError("CashierMiniGame instance not found!");
+        }
     }
     
     // Call this when the cashier mini-game is completed successfully
     public void OnTransactionCompleted()
     {
         orderFulfilled = true;
-        thoughtBubble.SetActive(false);
+        if (thoughtBubble != null) thoughtBubble.SetActive(false);
         
         // TODO: Implement positive consequences (money, reputation, etc.)
         Debug.Log("Transaction completed successfully!");
@@ -155,7 +176,7 @@ public class Customer : MonoBehaviour
     public void OnTransactionFailed()
     {
         // Customer gets angry
-        spriteRenderer.sprite = angrySprite;
+        if (spriteRenderer != null) spriteRenderer.sprite = angrySprite;
         
         // TODO: Implement negative consequences
         Debug.Log("Transaction failed!");
@@ -176,5 +197,15 @@ public class Customer : MonoBehaviour
     {
         // Allow clicking on the customer to interact
         OnCustomerInteracted();
+    }
+    
+    // For testing - remove in final version
+    void Update()
+    {
+        // Temporary testing shortcut - press Space to simulate collecting all items
+        if (Input.GetKeyDown(KeyCode.Space) && !itemsCollected)
+        {
+            OnAllItemsCollected();
+        }
     }
 }
