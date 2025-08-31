@@ -18,6 +18,9 @@ public class npcController : MonoBehaviour
     [ShowInInspector, ReadOnly] float patience;
     float baseDecay = 1;
 
+    [Header("Animation")]
+    [SerializeField] Animator animator;
+
     [Header("Runtime (debug)")]
     [ShowInInspector, ReadOnly] public List<ItemData> orderList = new();
     [ShowInInspector, ReadOnly] public int expectedTotal;
@@ -38,10 +41,14 @@ public class npcController : MonoBehaviour
         if (patienceBar.value < 0.3f)
         {
             fillImage.color = Color.red;
+            animator.SetBool("Rage", false);
+            animator.SetBool("Super Rage", true);
+            
         }
         else if (patienceBar.value < 0.5f)
         {
             fillImage.color = Color.yellow;
+            animator.SetBool("Rage", true);
         }
         else
         {
