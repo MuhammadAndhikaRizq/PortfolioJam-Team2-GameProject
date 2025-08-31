@@ -21,6 +21,8 @@ public class npcController : MonoBehaviour
     [ShowInInspector, ReadOnly] public List<ItemData> orderList = new();
     [ShowInInspector, ReadOnly] public int expectedTotal;
 
+    public System.Action OnLeave;
+
     void Start()
     {
         patience = data.maxPatienceBarValue;
@@ -65,6 +67,7 @@ public class npcController : MonoBehaviour
 
     void Leave()
     {
+        OnLeave?.Invoke();
         Destroy(gameObject);
     }
 
