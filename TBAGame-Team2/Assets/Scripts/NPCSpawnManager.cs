@@ -27,10 +27,17 @@ public class NPCSpawnManager : MonoBehaviour
         if (currentNPC != null) return;
         currentNPC = Instantiate(npcPrefab, spawnPos.position, Quaternion.identity);
         var controller = currentNPC.GetComponent<npcController>();
+        controller.OnLeave += HandleNPCLeave;
     }
 
-    void onCustomerLeave()
+    void HandleNPCLeave()
     {
+        StartCoroutine(OnNPCLeave());
+    }
+
+    IEnumerator OnNPCLeave()
+    {
+        yield return new WaitForSeconds(2f);
         currentNPC = null;
         SpawnNPC();
     }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using System.Linq;
+using UnityEngine.UI;
+using System.Security.Cryptography;
 
 public class npcController : MonoBehaviour
 {
@@ -10,12 +12,16 @@ public class npcController : MonoBehaviour
     public List<ItemData> menuPool;
     public NPCData data;
     [Header("Patience")]
+    [SerializeField] Slider patienceBar;
+    [SerializeField] Image fillImage;
     [ShowInInspector, ReadOnly] float patience;
     float baseDecay = 1;
 
     [Header("Runtime (debug)")]
     [ShowInInspector, ReadOnly] public List<ItemData> orderList = new();
     [ShowInInspector, ReadOnly] public int expectedTotal;
+
+    public System.Action OnLeave;
 
     void Start()
     {
@@ -26,6 +32,19 @@ public class npcController : MonoBehaviour
     void Update()
     {
         TickPatience();
+        patienceBar.value = patience / data.maxPatienceBarValue;
+        if (patienceBar.value < 0.3f)
+        {
+            fillImage.color = Color.red;
+        }
+        else if (patienceBar.value < 0.5f)
+        {
+            fillImage.color = Color.yellow;
+        }
+        else
+        {
+            fillImage.color = Color.green;
+        }
     }
 
     void TickPatience()
@@ -48,6 +67,7 @@ public class npcController : MonoBehaviour
 
     void Leave()
     {
+        OnLeave?.Invoke();
         Destroy(gameObject);
     }
 
