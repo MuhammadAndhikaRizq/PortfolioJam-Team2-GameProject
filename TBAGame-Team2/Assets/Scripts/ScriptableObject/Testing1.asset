@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c60f3bb867663a4b870b24113bb205c, type: 3}
   m_Name: Testing1
   m_EditorClassIdentifier: 
-  npcName: 
+  npcName: NPC1
   maxPatienceBarValue: 20

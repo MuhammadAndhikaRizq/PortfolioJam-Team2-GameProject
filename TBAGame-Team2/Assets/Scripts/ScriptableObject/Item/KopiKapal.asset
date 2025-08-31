@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: KopiKapal
   itemIcon: {fileID: 0}
-  itemDescription: 
-  itemPrice: 0
+  itemPrice: 2000
+  itemPrefab: {fileID: 0}

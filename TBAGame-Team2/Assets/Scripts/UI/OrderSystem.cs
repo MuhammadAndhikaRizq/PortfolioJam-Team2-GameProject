@@ -33,12 +33,11 @@ public class OrderItem
     }
 }
 
-
 public class OrderSystem : MonoBehaviour
 {
     public static OrderSystem Instance;
     
-    [SerializeField] private ItemData[] availableItems;
+    public ItemData[] availableItems;
     
     void Awake()
     {

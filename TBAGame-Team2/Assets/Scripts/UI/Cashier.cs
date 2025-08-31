@@ -32,6 +32,8 @@ public class Cashier : MonoBehaviour
     private string currentInput = "";
     private bool isAddingItems = true;
     
+    private Customer currentCustomer;
+    
     void Awake()
     {
         if (Instance == null)
@@ -45,9 +47,10 @@ public class Cashier : MonoBehaviour
     public void StartMiniGame(Order order)
     {
         currentOrder = order;
-        customerPayment = commonNotes[Random.Range(0, commonNotes.Length)];
+        currentCustomer = FindObjectOfType<Customer>(); // Since we have only one customer
         
-        // Ensure customer payment is at least the order total
+        // Determine customer payment (ensure it's at least the order total)
+        customerPayment = commonNotes[Random.Range(0, commonNotes.Length)];
         while (customerPayment < currentOrder.TotalPrice)
         {
             customerPayment = commonNotes[Random.Range(0, commonNotes.Length)];
@@ -170,7 +173,12 @@ public class Cashier : MonoBehaviour
             // Correct change given
             Debug.Log("Transaction completed successfully!");
             miniGamePanel.SetActive(false);
-            // Here you would typically trigger customer satisfaction and game progression
+            
+            // Notify customer of successful transaction
+            if (currentCustomer != null)
+            {
+                currentCustomer.OnTransactionCompleted();
+            }
         }
         else
         {
