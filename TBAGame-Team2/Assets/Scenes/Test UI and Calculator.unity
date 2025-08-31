@@ -5853,7 +5853,7 @@ GameObject:
   - component: {fileID: 1604506441}
   - component: {fileID: 1604506440}
   m_Layer: 0
-  m_Name: Counter
+  m_Name: Counter Image (Placeholder)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8206,7 +8206,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2078767754, guid: 3a02051328fea1e47913ebaa76c869c0, type: 3}
+  m_Sprite: {fileID: -9269562, guid: c8dede451c70c754587dddad69914dcd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8227,6 +8227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7198085467449771462}
   - component: {fileID: 3709702850056411000}
+  - component: {fileID: 7198085467449771464}
   - component: {fileID: 5253000525068951848}
   - component: {fileID: 7198085467449771463}
   m_Layer: 0
@@ -8299,6 +8300,41 @@ MonoBehaviour:
   normalSprite: {fileID: -9269562, guid: c8dede451c70c754587dddad69914dcd, type: 3}
   happySprite: {fileID: -1274174110, guid: 5fd5ba4da38b15742afab1219ff6117e, type: 3}
   angrySprite: {fileID: 178525044, guid: 3a02051328fea1e47913ebaa76c869c0, type: 3}
+--- !u!70 &7198085467449771464
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4975111927057969817}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.16499995, y: 0.090000145}
+  m_Size: {x: 3.2299998, y: 10.209999}
+  m_Direction: 0
 --- !u!224 &7347987899888709892
 RectTransform:
   m_ObjectHideFlags: 0

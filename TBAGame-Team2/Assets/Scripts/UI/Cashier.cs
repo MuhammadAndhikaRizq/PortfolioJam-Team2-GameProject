@@ -33,22 +33,27 @@ public class Cashier : MonoBehaviour
     
     private Customer currentCustomer;
 
+    void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
+
     void Start()
     {
+        // Cache the customer reference once
         currentCustomer = FindObjectOfType<Customer>();
+    }
 
-        if (currentCustomer != null)
+    // Add a method to manually start the mini-game for testing
+    public void StartTestGame()
+    {
+        if (OrderSystem.Instance != null)
         {
-            // Generate a test order for debugging
-            if (OrderSystem.Instance != null)
-            {
-                Order testOrder = OrderSystem.Instance.GenerateRandomOrder();
-                StartMiniGame(testOrder);
-            }
-            else
-            {
-                Debug.LogError("OrderSystem instance not found!");
-            }
+            Order testOrder = OrderSystem.Instance.GenerateRandomOrder();
+            StartMiniGame(testOrder);
         }
     }
     
