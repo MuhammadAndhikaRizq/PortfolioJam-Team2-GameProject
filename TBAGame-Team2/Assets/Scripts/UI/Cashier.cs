@@ -18,6 +18,11 @@ public class Cashier : MonoBehaviour
     [SerializeField] private Button confirmButton;
     [SerializeField] private Button giveChangeButton;
 
+    [Header("Money Interaction")]
+    [SerializeField] private Money moneyHandler;
+    //[SerializeField] private Sprite moneySprite;
+    [SerializeField] private Transform moneySpawnPoint;
+
     [Header("Money Settings")]
     [SerializeField] private int[] denominations = { 1000, 2000, 5000, 10000, 20000, 50000 };
     [SerializeField] private int[] commonNotes = { 10000, 20000, 50000 };
@@ -30,6 +35,7 @@ public class Cashier : MonoBehaviour
     private string _currentInput = "";
     private bool _isAddingItems = true;
     private bool _isMiniGameActive = false;
+    private bool _isMoneyRevealed = false;
 
     private Customer _currentCustomer;
 
@@ -39,6 +45,11 @@ public class Cashier : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
+
+        if (moneyHandler != null)
+        {
+            moneyHandler.gameObject.SetActive(false);
+        }
 
         // Start with the panel disabled
         miniGamePanel.SetActive(false);
@@ -96,12 +107,12 @@ public class Cashier : MonoBehaviour
         {
             orderSummaryText.text += $"{item.quantity}x {item.item.itemName} - ${item.item.itemPrice * item.quantity}\n";
         }
-        orderSummaryText.text += $"\nTotal: ${_currentOrder.TotalPrice}";
 
-        // Setup payment info
-        paymentText.text = $"Customer pays: ${_customerPayment}";
+        // Initially hide payment and change info until money is revealed
+        paymentText.text = "Confirm total to see payment";
+        changeText.text = "";
         _changeDue = _customerPayment - _currentOrder.TotalPrice;
-        changeText.text = $"Change due: ${_changeDue}";
+        moneyHandler.gameObject.SetActive(true);
 
         // Setup buttons
         confirmButton.onClick.RemoveAllListeners();
@@ -178,16 +189,57 @@ public class Cashier : MonoBehaviour
         if (_calculatedTotal == _currentOrder.TotalPrice)
         {
             // Correct total - proceed to payment phase
-            if (numberPad != null) numberPad.SetActive(false);
-            if (cashDrawer != null) cashDrawer.SetActive(true);
-            if (giveChangeButton != null) giveChangeButton.gameObject.SetActive(true);
+            // Spawn money on counter
+            SpawnMoneyOnCounter();
+            
+            // Update payment text to instruct player
+            if (paymentText != null)
+                paymentText.text = "Click on the money to see how much customer gave you";
         }
         else
         {
             // Incorrect total - provide feedback
             if (displayText != null) displayText.text = "Incorrect! Try again";
-            StartCoroutine(ResetAfterDelay(2f));
+            StartCoroutine(ResetAfterDelay(1f));
         }
+    }
+
+    void SpawnMoneyOnCounter()
+    {
+        if (moneyHandler != null && moneySpawnPoint != null)
+        {
+            // Position the money at the spawn point
+            moneyHandler.transform.position = moneySpawnPoint.position;
+            
+            // Set up the money with the correct amount
+            moneyHandler.Setup(_customerPayment, null); // Change null into money sprite when ready
+
+            // Show the money
+            moneyHandler.gameObject.SetActive(true);
+            moneyHandler.Show();
+            
+            // Subscribe to the reveal event
+            moneyHandler.OnMoneyRevealed += OnMoneyRevealed;
+            
+            _isMoneyRevealed = false;
+        }
+    }
+
+    void OnMoneyRevealed(int amount)
+    {
+        _isMoneyRevealed = true;
+        
+        // Update payment text to show the amount
+        if (paymentText != null)
+            paymentText.text = $"Customer pays: ${amount}";
+        
+        // Show the change due
+        if (changeText != null)
+            changeText.text = $"Change due: ${_changeDue}";
+        
+        // Show the cash drawer and change button
+        if (cashDrawer != null) cashDrawer.SetActive(true);
+        if (giveChangeButton != null) giveChangeButton.gameObject.SetActive(true);
     }
 
     public void OnDenominationSelected(int value)
@@ -203,8 +255,15 @@ public class Cashier : MonoBehaviour
         {
             // Correct change given
             Debug.Log("Transaction completed successfully!");
+            
+            // Hide the money
+            if (moneyHandler != null)
+            {
+                moneyHandler.Hide();
+                moneyHandler.OnMoneyRevealed -= OnMoneyRevealed;
+            }
+            
             miniGamePanel.SetActive(false);
-            _isMiniGameActive = false; // Reset flag
             
             // Notify customer of successful transaction
             if (_currentCustomer != null)
@@ -228,6 +287,13 @@ public class Cashier : MonoBehaviour
 
     public void CloseMiniGame()
     {
+        // Hide the money if visible
+        if (moneyHandler != null && moneyHandler.gameObject.activeSelf)
+        {
+            moneyHandler.Hide();
+            moneyHandler.OnMoneyRevealed -= OnMoneyRevealed;
+        }
+        
         miniGamePanel.SetActive(false);
         _isMiniGameActive = false;
     }

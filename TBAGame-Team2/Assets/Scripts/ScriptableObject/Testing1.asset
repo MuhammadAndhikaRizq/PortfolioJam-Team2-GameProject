@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Testing1
   m_EditorClassIdentifier: 
   npcName: NPC1
-  maxPatienceBarValue: 20
+  maxPatienceBarValue: 60

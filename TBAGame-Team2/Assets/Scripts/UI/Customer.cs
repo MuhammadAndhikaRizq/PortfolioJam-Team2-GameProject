@@ -130,7 +130,7 @@ public class Customer : MonoBehaviour
 
     void ServeSuccess()
     {
-        animator.SetTrigger("Happy");
+        animator.SetBool("Happy", true);
         Debug.Log("Customer served successfully!");
         
         // Additional visual feedback
@@ -165,7 +165,7 @@ public class Customer : MonoBehaviour
     void Leave()
     {
         // Angry customer
-        animator.SetTrigger("Super Rage");
+        animator.SetBool("Super Rage", true);
         Debug.Log("Customer left angry!");
 
         // Close mini-game if it's open
