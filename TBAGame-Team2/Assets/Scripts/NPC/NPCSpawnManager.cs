@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 public class NPCSpawnManager : MonoBehaviour
 {
@@ -8,10 +10,7 @@ public class NPCSpawnManager : MonoBehaviour
     [SerializeField] GameObject npcPrefab;
     [SerializeField] Transform spawnPos;
 
-    GameObject currentNPC;
-
-    
-    // Start is called before the first frame update
+    [ShowInInspector, Sirenix.OdinInspector.ReadOnly] GameObject currentNPC;
 
     void Awake()
     {
@@ -26,7 +25,7 @@ public class NPCSpawnManager : MonoBehaviour
     {
         if (currentNPC != null) return;
         currentNPC = Instantiate(npcPrefab, spawnPos.position, Quaternion.identity);
-        var controller = currentNPC.GetComponent<npcController>();
+        var controller = currentNPC.GetComponent<Customer>();
         controller.OnLeave += HandleNPCLeave;
     }
 
@@ -39,6 +38,7 @@ public class NPCSpawnManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         currentNPC = null;
+        Cashier.Instance.ResetMiniGame();
         SpawnNPC();
     }
 }

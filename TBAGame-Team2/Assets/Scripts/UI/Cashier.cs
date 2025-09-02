@@ -126,7 +126,7 @@ public class Cashier : MonoBehaviour
         giveChangeButton.gameObject.SetActive(false);
     }
 
-    void ResetCalculator()
+    public void ResetCalculator()
     {
         _currentInput = "";
         _calculatedTotal = 0;
@@ -298,8 +298,19 @@ public class Cashier : MonoBehaviour
         _isMiniGameActive = false;
     }
 
+    public void ResetMiniGame()
+    {
+        ResetCalculator();
+        _selectedChange = 0;
+        _changeDue = 0;
+        _customerPayment = 0;
+        _isMoneyRevealed = false;
+
+        CloseMiniGame();
+    }
+
     // For testing - remove in final version
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
     void OnGUI()
     {
         // Add a test button to hide the mini-game
