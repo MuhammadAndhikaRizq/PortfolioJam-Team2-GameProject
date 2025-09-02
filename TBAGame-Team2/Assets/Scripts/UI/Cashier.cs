@@ -6,32 +6,32 @@ using System.Collections;
 public class Cashier : MonoBehaviour
 {
     public static Cashier Instance;
-    
+
     [Header("UI References")]
-    public GameObject miniGamePanel;
-    public TextMeshProUGUI displayText;
-    public TextMeshProUGUI orderSummaryText;
-    public TextMeshProUGUI paymentText;
-    public TextMeshProUGUI changeText;
-    public GameObject numberPad;
-    public GameObject cashDrawer;
-    public Button confirmButton;
-    public Button giveChangeButton;
-    
+    [SerializeField] private GameObject miniGamePanel;
+    [SerializeField] private TextMeshProUGUI displayText;
+    [SerializeField] private TextMeshProUGUI orderSummaryText;
+    [SerializeField] private TextMeshProUGUI paymentText;
+    [SerializeField] private TextMeshProUGUI changeText;
+    [SerializeField] private GameObject numberPad;
+    [SerializeField] private GameObject cashDrawer;
+    [SerializeField] private Button confirmButton;
+    [SerializeField] private Button giveChangeButton;
+
     [Header("Money Settings")]
-    public int[] denominations = { 1000, 2000, 5000, 10000, 20000, 50000 };
-    public int[] commonNotes = { 10000, 20000, 50000 };
-    
-    private Order currentOrder;
-    private int customerPayment;
-    private int calculatedTotal = 0;
-    private int changeDue = 0;
-    private int selectedChange = 0;
-    
-    private string currentInput = "";
-    private bool isAddingItems = true;
-    
-    private Customer currentCustomer;
+    [SerializeField] private int[] denominations = { 1000, 2000, 5000, 10000, 20000, 50000 };
+    [SerializeField] private int[] commonNotes = { 10000, 20000, 50000 };
+
+    private Order _currentOrder;
+    private int _customerPayment;
+    private int _calculatedTotal = 0;
+    private int _changeDue = 0;
+    private int _selectedChange = 0;
+    private string _currentInput = "";
+    private bool _isAddingItems = true;
+    private bool _isMiniGameActive = false;
+
+    private Customer _currentCustomer;
 
     void Awake()
     {
@@ -39,154 +39,143 @@ public class Cashier : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
+
+        // Start with the panel disabled
+        miniGamePanel.SetActive(false);
     }
 
-    void Start()
+    void Update()
     {
-        // Cache the customer reference once
-        currentCustomer = FindObjectOfType<Customer>();
-    }
-
-    // Add a method to manually start the mini-game for testing
-    public void StartTestGame()
-    {
-        if (OrderSystem.Instance != null)
+        // Check if customer ran out of patience during mini-game
+        if (miniGamePanel.activeSelf && _currentCustomer != null && _currentCustomer.IsOutOfPatience())
         {
-            Order testOrder = OrderSystem.Instance.GenerateRandomOrder();
-            StartMiniGame(testOrder);
+            // Customer got impatient during transaction
+            CloseMiniGame();
+            Debug.Log("Customer got impatient and left!");
         }
     }
-    
-    public void StartMiniGame(Order order)
+
+    public void StartMiniGame(Order order, Customer customer)
     {
-        Debug.Log("Starting mini-game with order total: $" + order.TotalPrice);
+        if (_isMiniGameActive || customer.IsServed()) return;
+    
+        _isMiniGameActive = true;
+        _currentOrder = order;
+        _currentCustomer = customer;
 
-        currentOrder = order;
+        // Determine customer payment
+        _customerPayment = commonNotes[commonNotes.Length - 1]; // Start with largest note
 
-        // Determine customer payment (ensure it's at least the order total)
-        customerPayment = commonNotes[commonNotes.Length - 1];
         foreach (int note in commonNotes)
         {
-            if (note >= currentOrder.TotalPrice)
+            if (note >= _currentOrder.TotalPrice)
             {
-                customerPayment = note;
+                _customerPayment = note;
                 break;
             }
         }
 
+        // Fallback: if still not enough, use multiple of the largest note
+        if (_customerPayment < _currentOrder.TotalPrice)
+        {
+            int multiplier = Mathf.CeilToInt((float)_currentOrder.TotalPrice / _customerPayment);
+            _customerPayment *= multiplier;
+            Debug.LogWarning($"Order total exceeds largest note. Customer will pay {multiplier}x {_customerPayment/multiplier}");
+        }
+
         SetupUI();
+        miniGamePanel.SetActive(true);
         ResetCalculator();
     }
-    
+
     void SetupUI()
     {
         // Display order summary
-        System.Text.StringBuilder orderSummaryBuilder = new System.Text.StringBuilder();
-        orderSummaryBuilder.Append("Order Summary:\n");
-        
-        foreach (OrderItem item in currentOrder.items)
+        orderSummaryText.text = "Order Summary:\n";
+        foreach (OrderItem item in _currentOrder.items)
         {
-            orderSummaryBuilder.Append($"{item.quantity}x {item.item.itemName} - ${item.item.itemPrice * item.quantity}\n");
+            orderSummaryText.text += $"{item.quantity}x {item.item.itemName} - ${item.item.itemPrice * item.quantity}\n";
         }
-        
-        orderSummaryBuilder.Append($"\nTotal: ${currentOrder.TotalPrice}");
-        
-        if (orderSummaryText != null)
-        {
-            orderSummaryText.text = orderSummaryBuilder.ToString();
-        }
-        
+        orderSummaryText.text += $"\nTotal: ${_currentOrder.TotalPrice}";
+
         // Setup payment info
-        if (paymentText != null)
-            paymentText.text = $"Customer pays: ${customerPayment}";
-            
-        changeDue = customerPayment - currentOrder.TotalPrice;
-        
-        if (changeText != null)
-            changeText.text = $"Change due: ${changeDue}";
-        
+        paymentText.text = $"Customer pays: ${_customerPayment}";
+        _changeDue = _customerPayment - _currentOrder.TotalPrice;
+        changeText.text = $"Change due: ${_changeDue}";
+
         // Setup buttons
-        if (confirmButton != null)
-        {
-            confirmButton.onClick.RemoveAllListeners();
-            confirmButton.onClick.AddListener(OnConfirmTotal);
-        }
-        
-        if (giveChangeButton != null)
-        {
-            giveChangeButton.onClick.RemoveAllListeners();
-            giveChangeButton.onClick.AddListener(OnGiveChange);
-        }
-        
+        confirmButton.onClick.RemoveAllListeners();
+        confirmButton.onClick.AddListener(OnConfirmTotal);
+
+        giveChangeButton.onClick.RemoveAllListeners();
+        giveChangeButton.onClick.AddListener(OnGiveChange);
+
         // Initially hide cash drawer
-        if (cashDrawer != null)
-            cashDrawer.SetActive(false);
-            
-        if (giveChangeButton != null)
-            giveChangeButton.gameObject.SetActive(false);
+        cashDrawer.SetActive(false);
+        giveChangeButton.gameObject.SetActive(false);
     }
-    
+
     void ResetCalculator()
     {
-        currentInput = "";
-        calculatedTotal = 0;
-        isAddingItems = true;
+        _currentInput = "";
+        _calculatedTotal = 0;
+        _isAddingItems = true;
         UpdateDisplay();
     }
-    
+
     public void OnNumberPressed(int number)
     {
-        if (!isAddingItems) return;
-        
-        currentInput += number.ToString();
+        if (!_isAddingItems) return;
+
+        _currentInput += number.ToString();
         UpdateDisplay();
     }
-    
+
     public void OnAddPressed()
     {
-        if (!isAddingItems || string.IsNullOrEmpty(currentInput)) return;
-        
-        int value = int.Parse(currentInput);
-        calculatedTotal += value;
-        currentInput = "";
+        if (!_isAddingItems || string.IsNullOrEmpty(_currentInput)) return;
+
+        int value = int.Parse(_currentInput);
+        _calculatedTotal += value;
+        _currentInput = "";
         UpdateDisplay();
     }
-    
+
     public void OnEqualsPressed()
     {
-        if (string.IsNullOrEmpty(currentInput)) return;
-        
-        int value = int.Parse(currentInput);
-        calculatedTotal += value;
-        currentInput = calculatedTotal.ToString();
-        isAddingItems = false;
+        if (string.IsNullOrEmpty(_currentInput)) return;
+
+        int value = int.Parse(_currentInput);
+        _calculatedTotal += value;
+        _currentInput = _calculatedTotal.ToString();
+        _isAddingItems = false;
         UpdateDisplay();
     }
-    
+
     public void OnClearPressed()
     {
-        currentInput = "";
+        _currentInput = "";
         UpdateDisplay();
     }
-    
+
     void UpdateDisplay()
     {
         if (displayText != null)
         {
-            if (!string.IsNullOrEmpty(currentInput))
+            if (!string.IsNullOrEmpty(_currentInput))
             {
-                displayText.text = currentInput;
+                displayText.text = _currentInput;
             }
             else
             {
-                displayText.text = calculatedTotal.ToString();
+                displayText.text = _calculatedTotal.ToString();
             }
         }
     }
-    
+
     void OnConfirmTotal()
     {
-        if (calculatedTotal == currentOrder.TotalPrice)
+        if (_calculatedTotal == _currentOrder.TotalPrice)
         {
             // Correct total - proceed to payment phase
             if (numberPad != null) numberPad.SetActive(false);
@@ -200,44 +189,51 @@ public class Cashier : MonoBehaviour
             StartCoroutine(ResetAfterDelay(2f));
         }
     }
-    
+
     public void OnDenominationSelected(int value)
     {
-        selectedChange += value;
+        _selectedChange += value;
         if (changeText != null)
-            changeText.text = $"Change due: ${changeDue}\nSelected: ${selectedChange}";
+            changeText.text = $"Change due: ${_changeDue}\nSelected: ${_selectedChange}";
     }
-    
+
     void OnGiveChange()
     {
-        if (selectedChange == changeDue)
+        if (_selectedChange == _changeDue)
         {
             // Correct change given
             Debug.Log("Transaction completed successfully!");
-            if (miniGamePanel != null) miniGamePanel.SetActive(false);
+            miniGamePanel.SetActive(false);
+            _isMiniGameActive = false; // Reset flag
             
             // Notify customer of successful transaction
-            if (currentCustomer != null)
+            if (_currentCustomer != null)
             {
-                currentCustomer.OnTransactionCompleted();
+                _currentCustomer.TransactionCompleted(true);
             }
         }
         else
         {
             // Incorrect change - provide feedback
-            if (changeText != null)
-                changeText.text = $"Incorrect change! Try again\nDue: ${changeDue}, Selected: ${selectedChange}";
-            selectedChange = 0;
+            changeText.text = $"Incorrect change! Try again\nDue: ${_changeDue}, Selected: ${_selectedChange}";
+            _selectedChange = 0;
         }
     }
-    
+
     IEnumerator ResetAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
         ResetCalculator();
     }
-    
+
+    public void CloseMiniGame()
+    {
+        miniGamePanel.SetActive(false);
+        _isMiniGameActive = false;
+    }
+
     // For testing - remove in final version
+    #if UNITY_EDITOR
     void OnGUI()
     {
         // Add a test button to hide the mini-game
@@ -246,7 +242,7 @@ public class Cashier : MonoBehaviour
             if (miniGamePanel != null)
                 miniGamePanel.SetActive(false);
         }
-        
+
         // Add a test button to show the mini-game
         if (GUI.Button(new Rect(10, 50, 150, 30), "Show Mini-Game"))
         {
@@ -254,4 +250,5 @@ public class Cashier : MonoBehaviour
                 miniGamePanel.SetActive(true);
         }
     }
+    #endif
 }
