@@ -7,7 +7,7 @@ public class ItemHoverScale : MonoBehaviour
     private Vector3 originalScale;
     private Vector3 targetScale;
 
-    public float hoverlScaleFactor = 5f;
+    public float hoverlScaleFactor = 1.2f;
     public float hoverSpeed = 5;
 
     private bool isHovered = false;

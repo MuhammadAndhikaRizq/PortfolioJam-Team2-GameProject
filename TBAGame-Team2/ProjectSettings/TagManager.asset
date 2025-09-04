@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Interactible
   - BackgroundNPC
+  - Item
+  - NPC
+  - PlasticBag
   layers:
   - Default
   - TransparentFX
@@ -57,4 +60,7 @@ TagManager:
     locked: 0
   - name: New Layer 5
     uniqueID: 368155767
+    locked: 0
+  - name: Items
+    uniqueID: 1354684781
     locked: 0
