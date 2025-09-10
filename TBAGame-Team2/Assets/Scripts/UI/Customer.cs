@@ -1,211 +1,228 @@
-using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using System.Linq;
 
 public class Customer : MonoBehaviour
 {
-    [Header("Customer Data")]
-    public NPCData npcData;
-    public Order order;
-    
-    [Header("UI Elements")]
-    public GameObject thoughtBubble;
-    public TextMeshProUGUI orderText;
-    public Slider patienceSlider;
-    
-    [Header("Appearance")]
-    public SpriteRenderer spriteRenderer;
-    public Sprite normalSprite;
-    public Sprite happySprite;
-    public Sprite angrySprite;
-    
-    // State variables
-    private bool orderFulfilled = false;
-    private bool isWaiting = true;
-    private float currentPatience;
-    private bool itemsCollected = false;
-    
+    [Header("Data")]
+    public List<ItemData> menuPool;
+    public List<Image> orderDisplay;
+    public NPCData data;
+
+    [Header("Patience")]
+    [SerializeField] private Slider patienceBar;
+    [SerializeField] private Image fillImage;
+    private float _patience;
+    private float _baseDecay = 1;
+
+    [Header("Animation")]
+    [SerializeField] private Animator animator;
+
+    [Header("Runtime")]
+    public List<ItemData> orderList = new();
+
+    private int _expectedTotal;
+    private int _collectedItems = 0;
+    private bool _isInMiniGame = false;
+    private bool _isServed = false;
+
+    public System.Action OnLeave;
+
     void Start()
     {
-        // Generate a random order for this customer
-        order = OrderSystem.Instance.GenerateRandomOrder();
-        
-        // Set up patience
-        currentPatience = npcData.maxPatienceBarValue;
-        
-        // Initialize the patience slider
-        if (patienceSlider != null)
-        {
-            patienceSlider.minValue = 0;
-            patienceSlider.maxValue = npcData.maxPatienceBarValue;
-            patienceSlider.value = currentPatience;
-        }
-        
-        // Set up thought bubble with order details
-        UpdateOrderDisplay();
-        
-        // Show thought bubble
-        thoughtBubble.SetActive(true);
-        
-        // Start patience depletion
-        StartCoroutine(PatienceCoroutine());
-        
-        // Log for testing
-        Debug.Log("Customer arrived with order. Total: $" + order.TotalPrice);
+        _patience = data.maxPatienceBarValue;
+        MakeOrder();
+        ShowOrder();
     }
-    
-    void UpdateOrderDisplay()
+
+    void Update()
     {
-        string orderString = "I want:\n";
-        foreach (OrderItem item in order.items)
+        // Always decrease _patience, even during mini-game
+        if (!_isServed && _patience > 0)
         {
-            orderString += $"{item.quantity}x {item.item.itemName} - ${item.item.itemPrice * item.quantity}\n";
-        }
-        orderText.text = orderString;
-    }
-    
-    IEnumerator PatienceCoroutine()
-    {
-        // Cache references to avoid repeated function calls
-        Image fillImage = patienceSlider.fillRect.GetComponent<Image>();
-        float maxPatience = npcData.maxPatienceBarValue;
-        
-        while (isWaiting && currentPatience > 0 && !orderFulfilled)
-        {
-            // Decrease patience over time
-            currentPatience -= Time.deltaTime;
-            
-            // Update patience slider
-            if (patienceSlider != null)
+            _patience -= _baseDecay * Time.deltaTime;
+            UpdatePatienceUI();
+
+            if (_patience <= 0)
             {
-                patienceSlider.value = currentPatience;
-                
-                // Change color based on patience level
-                float patiencePercent = currentPatience / maxPatience;
-                
-                if (fillImage != null)
-                {
-                    if (patiencePercent > 0.6f)
-                        fillImage.color = Color.green;
-                    else if (patiencePercent > 0.3f)
-                        fillImage.color = Color.yellow;
-                    else
-                        fillImage.color = Color.red;
-                }
+                Leave();
             }
-            
-            // Check if patience ran out
-            if (currentPatience <= 0)
-            {
-                OnPatienceRunOut();
-                yield break;
-            }
-            
-            // Wait until next frame
-            yield return null;
+        }
+
+        // Simulate item collection with SPACE key
+        if (Input.GetKeyDown(KeyCode.Space) && _collectedItems < orderList.Count && !_isServed)
+        {
+            CollectItem();
         }
     }
-    
-    void OnPatienceRunOut()
+
+    void CollectItem()
     {
-        // Customer gets angry and leaves
-        isWaiting = false;
-        if (spriteRenderer != null) spriteRenderer.sprite = angrySprite;
-        if (thoughtBubble != null) thoughtBubble.SetActive(false);
-        
-        // TODO: Implement negative consequences
-        Debug.Log("Customer left angry!");
-        
-        // Wait a moment then leave
-        StartCoroutine(LeaveAfterDelay(2f));
-    }
-    
-    // Call this when player has collected all items for this customer
-    public void OnAllItemsCollected()
-    {
-        itemsCollected = true;
-        
-        // Change thought bubble to show readiness for payment
-        if (orderText != null) orderText.text = "I'm ready to pay!";
-        
-        // Change customer appearance to happy
-        if (spriteRenderer != null) spriteRenderer.sprite = happySprite;
-        
-        // Stop patience depletion
-        isWaiting = false;
-        
-        Debug.Log("All items collected. Ready for payment.");
-    }
-    
-    // Call this when player interacts with the customer (e.g., clicks on them)
-    public void OnCustomerInteracted()
-    {
-        if (!itemsCollected)
+        _collectedItems++;
+
+        // Visual feedback for collected item
+        if (_collectedItems <= orderDisplay.Count)
         {
-            // Show order reminder
-            Debug.Log("Customer says: I'm still waiting for my items!");
-            return;
+            orderDisplay[_collectedItems - 1].color = new Color(0.5f, 0.5f, 0.5f, 0.5f); // Gray out collected item
         }
-        
-        // Start the cashier mini-game
-        if (Cashier.Instance != null)
+
+        // Check if all items are collected
+        if (_collectedItems >= orderList.Count)
         {
-            Cashier.Instance.StartMiniGame(order);
+            StartCashierMiniGame();
+        }
+    }
+
+    void StartCashierMiniGame()
+    {
+        _isInMiniGame = true;
+
+        // Convert orderList to the format expected by Cashier
+        Order cashierOrder = new Order();
+        var groupedItems = orderList.GroupBy(item => item);
+
+        foreach (var group in groupedItems)
+        {
+            cashierOrder.items.Add(new OrderItem(group.Key, group.Count()));
+        }
+
+        // Start the mini-game
+        Cashier.Instance.StartMiniGame(cashierOrder, this);
+    }
+
+    void UpdatePatienceUI()
+    {
+        patienceBar.value = _patience / data.maxPatienceBarValue;
+
+        if (patienceBar.value < 0.3f)
+        {
+            fillImage.color = Color.red;
+            animator.SetBool("Rage", false);
+            animator.SetBool("Super Rage", true);
+        }
+        else if (patienceBar.value < 0.5f)
+        {
+            fillImage.color = Color.yellow;
+            animator.SetBool("Rage", true);
         }
         else
         {
-            Debug.LogError("CashierMiniGame instance not found!");
+            fillImage.color = Color.green;
         }
     }
-    
-    // Call this when the cashier mini-game is completed successfully
-    public void OnTransactionCompleted()
+
+    public void TransactionCompleted(bool success)
     {
-        orderFulfilled = true;
-        if (thoughtBubble != null) thoughtBubble.SetActive(false);
+        _isInMiniGame = false;
+
+        if (success)
+        {
+            _isServed = true;
+            ServeSuccess();
+        }
+        else
+        {
+            Leave();
+        }
+    }
+
+    void ServeSuccess()
+    {
+        animator.SetBool("Happy", true);
+        Debug.Log("Customer served successfully!");
         
-        // TODO: Implement positive consequences (money, reputation, etc.)
-        Debug.Log("Transaction completed successfully!");
+        // Additional visual feedback
+        if (patienceBar != null)
+        {
+            patienceBar.gameObject.SetActive(false); // Hide patience bar
+        }
         
-        // Wait a moment then leave
+        // Change order display to show served status
+        foreach (Image display in orderDisplay)
+        {
+            if (display.gameObject.activeSelf)
+            {
+                display.color = Color.green; // Green checkmark effect
+            }
+        }
+
+        // Wait a moment before leaving
         StartCoroutine(LeaveAfterDelay(2f));
     }
-    
-    // Call this when the cashier mini-game is failed
-    public void OnTransactionFailed()
+
+    public bool IsServed()
     {
-        // Customer gets angry
-        if (spriteRenderer != null) spriteRenderer.sprite = angrySprite;
-        
-        // TODO: Implement negative consequences
-        Debug.Log("Transaction failed!");
-        
-        // Wait a moment then leave
+        return _isServed;
+    }
+
+    public bool IsOutOfPatience()
+    {
+        return _patience <= 0;
+    }
+
+    void Leave()
+    {
+        // Angry customer
+        animator.SetBool("Super Rage", true);
+        Debug.Log("Customer left angry!");
+
+        // Close mini-game if it's open
+        if (Cashier.Instance != null)
+        {
+            Cashier.Instance.CloseMiniGame();
+        }
+
+        // Wait a moment before leaving
         StartCoroutine(LeaveAfterDelay(2f));
     }
-    
+
     IEnumerator LeaveAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        
-        // Destroy the customer GameObject
+
+        OnLeave?.Invoke();
         Destroy(gameObject);
     }
-    
-    void OnMouseDown()
+
+    void MakeOrder()
     {
-        // Allow clicking on the customer to interact
-        OnCustomerInteracted();
-    }
-    
-    // For testing - remove in final version
-    void Update()
-    {
-        // Temporary testing shortcut - press Space to simulate collecting all items
-        if (Input.GetKeyDown(KeyCode.Space) && !itemsCollected)
+        int count = Random.Range(1, 4);
+        for (int i = 0; i < count; i++)
         {
-            OnAllItemsCollected();
+            orderList.Add(menuPool[Random.Range(0, menuPool.Count)]);
+        }
+        _expectedTotal = orderList.Sum(i => i.itemPrice);
+    }
+
+    void ShowOrder()
+    {
+        // Clear all displays first
+        foreach (Image display in orderDisplay)
+        {
+            display.gameObject.SetActive(false);
+        }
+        
+        // Group items by type and show with quantity indicators
+        var groupedItems = orderList.GroupBy(item => item);
+        int displayIndex = 0;
+        
+        foreach (var group in groupedItems)
+        {
+            if (displayIndex >= orderDisplay.Count) break;
+            
+            orderDisplay[displayIndex].sprite = group.Key.itemIcon;
+            orderDisplay[displayIndex].gameObject.SetActive(true);
+            
+            // Add quantity text (you'll need to add Text components to your order displays)
+            Text quantityText = orderDisplay[displayIndex].GetComponentInChildren<Text>();
+            if (quantityText != null)
+            {
+                quantityText.text = group.Count().ToString();
+            }
+            
+            displayIndex++;
         }
     }
 }
