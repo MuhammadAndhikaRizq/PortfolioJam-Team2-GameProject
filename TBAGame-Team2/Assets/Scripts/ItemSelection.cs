@@ -15,6 +15,11 @@ public class ItemSelection : MonoBehaviour
         startPosition = transform.position;
     }
 
+    void OnCollisionStay2D(Collision2D other)
+    {
+        Debug.Log("Collision with " + other.gameObject.name); 
+    }
+
     void Update()
     {
         InputSystem();
