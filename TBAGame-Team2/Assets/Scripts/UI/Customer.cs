@@ -10,6 +10,7 @@ public class Customer : MonoBehaviour
     public List<ItemData> menuPool;
     public List<Image> orderDisplay;
     public NPCData data;
+    ItemHolder itemHolder;
 
     [Header("Patience")]
     [SerializeField] private Slider patienceBar;
@@ -50,11 +51,21 @@ public class Customer : MonoBehaviour
                 Leave();
             }
         }
+    }
 
-        // Simulate item collection with SPACE key
-        if (Input.GetKeyDown(KeyCode.Space) && _collectedItems < orderList.Count && !_isServed)
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        itemHolder = collision.gameObject.GetComponent<ItemHolder>();
+        if (_collectedItems < orderList.Count && !_isServed)
         {
-            CollectItem();
+            for (int i = 0; i <= orderList.Count; i++)
+            {
+                if (itemHolder != null && itemHolder.itemData == orderList[_collectedItems])
+                {
+                    CollectItem();
+                    break;
+                }
+            }
         }
     }
 
@@ -147,7 +158,6 @@ public class Customer : MonoBehaviour
                 display.color = Color.green; // Green checkmark effect
             }
         }
-
         // Wait a moment before leaving
         StartCoroutine(LeaveAfterDelay(2f));
     }
@@ -180,6 +190,7 @@ public class Customer : MonoBehaviour
 
     IEnumerator LeaveAfterDelay(float delay)
     {
+        //NPC ILANG
         yield return new WaitForSeconds(delay);
 
         OnLeave?.Invoke();
