@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 537243967}
   - component: {fileID: 537243966}
   - component: {fileID: 537243965}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: kanan  revisi background depan minuman hijau (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -630,7 +630,7 @@ GameObject:
   - component: {fileID: 585789465}
   - component: {fileID: 585789464}
   - component: {fileID: 585789463}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: kanan  revisi background depan minuman hijau (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1145,7 +1145,7 @@ GameObject:
   - component: {fileID: 1090897131}
   - component: {fileID: 1090897130}
   - component: {fileID: 1090897135}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: kanan  revisi background depan minuman hijau
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1349,7 +1349,7 @@ GameObject:
   - component: {fileID: 1254240561}
   - component: {fileID: 1254240560}
   - component: {fileID: 1254240559}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: kanan  revisi background depan minuman hijau (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3165,6 +3165,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cashier Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3974806185654776932, guid: 0b15df1fc6fc35d4d9e502ca4cdca50e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4187551005314898003, guid: 0b15df1fc6fc35d4d9e502ca4cdca50e,
         type: 3}
