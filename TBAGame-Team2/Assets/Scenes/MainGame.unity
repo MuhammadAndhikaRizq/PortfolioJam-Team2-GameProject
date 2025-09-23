@@ -4324,7 +4324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d174581b9cc53f439cfdf6b3cb4f45f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcPrefab: {fileID: 7129110114616451479, guid: bc641fda5d7abee458f6fc1b7a74f2d6,
+  npcPrefab: {fileID: 7512022810732858741, guid: aedc528b3ac546949a188c56a8c6e24b,
     type: 3}
   spawnPos: {fileID: 359811598}
 --- !u!4 &910624360

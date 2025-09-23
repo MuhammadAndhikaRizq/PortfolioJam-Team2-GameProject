@@ -29,6 +29,8 @@ public class Customer : MonoBehaviour
     private bool _isInMiniGame = false;
     private bool _isServed = false;
 
+    private readonly HashSet<ItemHolder> _counted = new(); //Guard
+
     public System.Action OnLeave;
 
     void Start()
@@ -55,31 +57,50 @@ public class Customer : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        itemHolder = collision.gameObject.GetComponent<ItemHolder>();
-        if (_collectedItems < orderList.Count && !_isServed)
+        var holder = collision.gameObject.GetComponent<ItemHolder>();
+        if (holder == null || _isServed) return;
+
+        if(_counted.Contains(holder)) return; //Guard
+
+        if (orderList.Contains(holder.itemData))
         {
-            for (int i = 0; i <= orderList.Count; i++)
+            _counted.Add(holder);
+            CollectItem(holder.itemData);
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        var holder = collision.gameObject.GetComponent<ItemHolder>();
+        if (holder != null) ResetUI(holder);
+    }
+
+    void ResetUI(ItemHolder holder)
+    {
+        if (_counted.Contains(holder))
+        {
+            _counted.Remove(holder);
+
+            int index = orderList.FindIndex(i => i == holder.itemData);
+            if (index >= 0 && index < orderDisplay.Count)
             {
-                if (itemHolder != null && itemHolder.itemData == orderList[_collectedItems])
-                {
-                    CollectItem();
-                    break;
-                }
+                orderDisplay[index].color = Color.white;
+                _collectedItems = Mathf.Max(0, _collectedItems - 1);
             }
         }
     }
 
-    void CollectItem()
+    void CollectItem(ItemData collected)
     {
         _collectedItems++;
 
-        // Visual feedback for collected item
-        if (_collectedItems <= orderDisplay.Count)
+        int index = orderList.FindIndex(i => i == collected);
+
+        if (index >= 0 && index < orderDisplay.Count)
         {
-            orderDisplay[_collectedItems - 1].color = new Color(0.5f, 0.5f, 0.5f, 0.5f); // Gray out collected item
+            orderDisplay[index].color = Color.gray; // tandai slot sesuai item
         }
 
-        // Check if all items are collected
         if (_collectedItems >= orderList.Count)
         {
             StartCashierMiniGame();

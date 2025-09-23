@@ -25,7 +25,12 @@ public class ItemSelection : MonoBehaviour
         InputSystem();
         if (isDragging)
         {
+            this.GetComponent<Collider2D>().enabled = false;
             transform.position = MouseWorldPosition(Input.mousePosition) + offset;
+        }
+        else
+        {
+            this.GetComponent<Collider2D>().enabled = true;
         }
     }
 
