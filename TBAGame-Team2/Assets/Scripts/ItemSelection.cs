@@ -25,13 +25,13 @@ public class ItemSelection : MonoBehaviour
         InputSystem();
         if (isDragging)
         {
-            // this.GetComponent<Collider2D>().enabled = false;
+            this.GetComponent<Collider2D>().enabled = false;
             transform.position = MouseWorldPosition(Input.mousePosition) + offset;
         }
-        // else
-        // {
-        //     this.GetComponent<Collider2D>().enabled = true;
-        // }
+        else
+        {
+             this.GetComponent<Collider2D>().enabled = true;
+        }
     }
 
     private void InputSystem()

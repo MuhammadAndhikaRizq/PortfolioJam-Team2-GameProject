@@ -64,3 +64,6 @@ TagManager:
   - name: Items
     uniqueID: 1354684781
     locked: 0
+  - name: New Layer 7
+    uniqueID: 2898605389
+    locked: 0
