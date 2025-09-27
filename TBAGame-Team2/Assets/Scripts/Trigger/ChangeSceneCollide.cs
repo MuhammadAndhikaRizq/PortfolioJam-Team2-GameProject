@@ -37,6 +37,7 @@ public class ChangeSceneCollide : MonoBehaviour
             // Panggil fungsi untuk beralih ke UI/scene target
             if (targetScene != null && switchUI != null)
             {
+                other.transform.SetParent(targetScene.transform);
                 switchUI.SwitchTo(targetScene);
             }
             else
