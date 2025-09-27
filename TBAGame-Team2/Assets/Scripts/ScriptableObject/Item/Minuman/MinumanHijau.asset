@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b113cde2106322e439bc3d5dfd72c93a, type: 3}
-  m_Name: KopiKapal
+  m_Name: MinumanHijau
   m_EditorClassIdentifier: 
-  itemName: KopiKapal
-  itemIcon: {fileID: 21300000, guid: 448441e21a0df7b4993e20457b91d0f7, type: 3}
-  itemPrice: 2000
+  itemName: MinumanHijau
+  itemIcon: {fileID: 21300000, guid: 3d2aa2dae309bea4aad8feee6a186580, type: 3}
+  itemPrice: 3100
