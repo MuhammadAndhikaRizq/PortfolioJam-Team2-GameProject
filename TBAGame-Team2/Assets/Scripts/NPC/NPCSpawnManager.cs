@@ -25,6 +25,7 @@ public class NPCSpawnManager : MonoBehaviour
     {
         if (currentNPC != null) return;
         currentNPC = Instantiate(npcPrefab, spawnPos.position, Quaternion.identity);
+        currentNPC.transform.SetParent(this.transform.parent);
         var controller = currentNPC.GetComponent<Customer>();
         controller.OnLeave += HandleNPCLeave;
     }
