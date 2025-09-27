@@ -741,7 +741,7 @@ GameObject:
   - component: {fileID: 8133173399095583428}
   - component: {fileID: 7960444376773028678}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: NPC2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -806,7 +806,7 @@ SpriteRenderer:
   m_SortingLayerID: -1802681739
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9269562, guid: c8dede451c70c754587dddad69914dcd, type: 3}
+  m_Sprite: {fileID: 1059496099, guid: 1622c0b2a2ab1a3409bee784a8128d2a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -889,7 +889,7 @@ Animator:
   m_GameObject: {fileID: 7512022810732858741}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ced1bd98ba387604396e690966604183, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0068f4087da4b9b4a997ea24494c887f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -990,8 +990,8 @@ BoxCollider2D:
   m_Offset: {x: -1.4153156, y: 1.2979039}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.55108356, y: 0.4911851}
-    oldSize: {x: 3.23, y: 10.21}
+    pivot: {x: 0.50666666, y: 0.50390244}
+    oldSize: {x: 3.75, y: 10.25}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

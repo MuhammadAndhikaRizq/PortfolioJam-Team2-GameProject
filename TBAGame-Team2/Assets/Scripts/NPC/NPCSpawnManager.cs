@@ -7,7 +7,7 @@ using Sirenix.OdinInspector;
 public class NPCSpawnManager : MonoBehaviour
 {
     public static NPCSpawnManager instance;
-    [SerializeField] GameObject npcPrefab;
+    [SerializeField] List<GameObject> npcPrefabs = new();
     [SerializeField] Transform spawnPos;
 
     [ShowInInspector, Sirenix.OdinInspector.ReadOnly] GameObject currentNPC;
@@ -24,7 +24,8 @@ public class NPCSpawnManager : MonoBehaviour
     public void SpawnNPC()
     {
         if (currentNPC != null) return;
-        currentNPC = Instantiate(npcPrefab, spawnPos.position, Quaternion.identity);
+        int randomIndex = Random.Range(0, npcPrefabs.Count);
+        currentNPC = Instantiate(npcPrefabs[randomIndex], spawnPos.position, Quaternion.identity);
         currentNPC.transform.SetParent(this.transform.parent);
         var controller = currentNPC.GetComponent<Customer>();
         controller.OnLeave += HandleNPCLeave;
@@ -39,7 +40,7 @@ public class NPCSpawnManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         currentNPC = null;
-        Cashier.Instance.ResetMiniGame();
+        if (Cashier.Instance != null) Cashier.Instance.ResetMiniGame();
         SpawnNPC();
     }
 }
