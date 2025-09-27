@@ -5,62 +5,45 @@ using UnityEngine;
 public class ChangeSceneCollide : MonoBehaviour
 {
     [Header("UI Manager")]
-    public GameObject targetScene; // UI tujuan (etalase utama)
+    // UI/Scene yang akan dituju setelah item keluar
+    public GameObject targetScene; 
+    
+    // Referensi ke script SwitchUI Anda
     private SwitchUI switchUI;
 
     [Header("Item Setup")]
-    public string itemTag = "Item";
-
-
-    private bool isInside = false; // penanda item ada di dalam kulkas
+    // Pastikan tag ini sama dengan tag pada GameObject item Anda
+    public string itemTag = "Item"; 
 
     void Start()
     {
+        // Cari script SwitchUI di scene saat permainan dimulai
         switchUI = FindObjectOfType<SwitchUI>();
 
-        // cek manual: apakah item sudah ada di dalam trigger saat start
-        // Collider2D col = GetComponent<Collider2D>();
-        // Collider2D[] overlaps = new Collider2D[10];
-        // ContactFilter2D filter = new ContactFilter2D().NoFilter();
-
-        // int count = col.OverlapCollider(filter, overlaps);
-        // for (int i = 0; i < count; i++)
-        // {
-        //     if (overlaps[i].CompareTag(itemTag))
-        //     {
-        //         isInside = true;
-        //         Debug.Log("Item sudah ada di dalam kulkas sejak awal");
-        //     }
-        // }
+        if (switchUI == null)
+        {
+            Debug.LogError("Script SwitchUI tidak ditemukan di dalam scene!");
+        }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    // Fungsi ini akan dieksekusi HANYA KETIKA item KELUAR dari area trigger
+    void OnTriggerExit2D(Collider2D other)
     {
-        // if (other.CompareTag(itemTag) && isInside)
-        // {
-            Debug.Log("Item keluar kulkas → kembali ke etalase");
-
-            switchUI.SwitchTo(targetScene);
-
-
-
-        // }
+        // Cek apakah objek yang keluar memiliki tag yang benar
+        if (other.CompareTag(itemTag))
+        {
+            Debug.Log("Item dengan tag '" + itemTag + "' telah keluar dari area. Mengganti scene...");
+            
+            // Panggil fungsi untuk beralih ke UI/scene target
+            if (targetScene != null && switchUI != null)
+            {
+                switchUI.SwitchTo(targetScene);
+            }
+            else
+            {
+                Debug.LogWarning("Target Scene atau SwitchUI belum di-set di Inspector!");
+            }
+        }
     }
 
-    // void OnTriggerStay2D(Collider2D other)
-    // {
-    //     if (other.CompareTag(itemTag))
-    //     {
-    //         // cek kalau posisi item sudah lewat batas kulkas
-    //         if (!GetComponent<Collider2D>().bounds.Contains(other.transform.position))
-    //         {
-    //             Debug.Log("Item benar-benar keluar kulkas");
-    //             switchUI.SwitchTo(targetScene);
-
-
-    //             Destroy(other.gameObject);
-    //         }
-    //     }
-    // }
-    
 }

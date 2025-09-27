@@ -56,5 +56,10 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "TBAGame-Team2.sln"
+    "dotnet.defaultSolution": "TBAGame-Team2.sln",
+    "dotnet.server.useOmnisharp": false,
+    "dotnet.server.enableRoslynAnalyzers": false,
+    "dotnet.server.enableMsBuildLoadProjectsOnDemand": true,
+    "dotnet.server.enableEditorConfigSupport": true,
+    "dotnet.server.enableProjectLoad": false
 }
