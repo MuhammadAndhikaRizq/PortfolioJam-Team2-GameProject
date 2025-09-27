@@ -30,6 +30,7 @@ public class Customer : MonoBehaviour
     private bool _isServed = false;
 
     private readonly HashSet<ItemHolder> _counted = new(); //Guard
+    private readonly List<ItemHolder> _servedItems = new();
 
     public System.Action OnLeave;
 
@@ -65,7 +66,7 @@ public class Customer : MonoBehaviour
         if (orderList.Contains(holder.itemData))
         {
             _counted.Add(holder);
-            CollectItem(holder.itemData);
+            CollectItem(holder);
         }
     }
 
@@ -90,11 +91,11 @@ public class Customer : MonoBehaviour
         }
     }
 
-    void CollectItem(ItemData collected)
+    void CollectItem(ItemHolder holder)
     {
         _collectedItems++;
 
-        int index = orderList.FindIndex(i => i == collected);
+        int index = orderList.FindIndex(i => i == holder.itemData);
 
         if (index >= 0 && index < orderDisplay.Count)
         {
@@ -105,6 +106,9 @@ public class Customer : MonoBehaviour
         {
             StartCashierMiniGame();
         }
+
+        if (!_servedItems.Contains(holder))
+            _servedItems.Add(holder);
     }
 
     void StartCashierMiniGame()
@@ -164,24 +168,29 @@ public class Customer : MonoBehaviour
     {
         animator.SetBool("Happy", true);
         Debug.Log("Customer served successfully!");
-        
-        // Additional visual feedback
+
         if (patienceBar != null)
-        {
-            patienceBar.gameObject.SetActive(false); // Hide patience bar
-        }
-        
-        // Change order display to show served status
+            patienceBar.gameObject.SetActive(false);
+
         foreach (Image display in orderDisplay)
         {
             if (display.gameObject.activeSelf)
-            {
-                display.color = Color.green; // Green checkmark effect
-            }
+                display.color = Color.green;
         }
-        // Wait a moment before leaving
+        for (int i = 0; i < _servedItems.Count; i++)
+        {
+            var holder = _servedItems[i];
+            if (holder == null) continue;
+
+            holder.transform.SetParent(null, true);
+            Destroy(holder.gameObject);
+        }
+        _servedItems.Clear();
+        _counted.Clear();
+
         StartCoroutine(LeaveAfterDelay(2f));
     }
+
 
     public bool IsServed()
     {
