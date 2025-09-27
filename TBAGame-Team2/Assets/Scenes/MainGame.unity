@@ -2259,7 +2259,7 @@ Transform:
   m_GameObject: {fileID: 491831947}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6442,9 +6442,9 @@ GameObject:
   - component: {fileID: 1479475787}
   - component: {fileID: 1479475788}
   - component: {fileID: 1479475789}
+  - component: {fileID: 1479475792}
   - component: {fileID: 1479475791}
   - component: {fileID: 1479475790}
-  - component: {fileID: 1479475792}
   m_Layer: 0
   m_Name: Botol
   m_TagString: Untagged
@@ -6461,7 +6461,7 @@ Transform:
   m_GameObject: {fileID: 1479475786}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7121,7 +7121,7 @@ Transform:
   m_GameObject: {fileID: 1579537803}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9158,7 +9158,7 @@ Transform:
   m_GameObject: {fileID: 6487218744110544108}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

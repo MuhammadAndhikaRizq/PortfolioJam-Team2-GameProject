@@ -17,7 +17,7 @@ public class ItemSource : MonoBehaviour
             }
 
             Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mouseWorld.z = 0;
+            mouseWorld.z = -2;
             GameObject clone = Instantiate(objectPrefab, mouseWorld, Quaternion.identity);
             
             lastClickTime = Time.time;
@@ -26,9 +26,4 @@ public class ItemSource : MonoBehaviour
         
     }
     
-
-    // IEnumerator WatitingClone()
-    // {
-    //     yield return new WaitForSeconds(1f);
-    // }
 }
