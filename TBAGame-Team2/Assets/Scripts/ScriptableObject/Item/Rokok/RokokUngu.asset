@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RokokUngu
   m_EditorClassIdentifier: 
   itemName: RokokUngu
-  itemIcon: {fileID: 21300000, guid: 1c34363cbb08ee440b2ec82255d4c27d, type: 3}
+  itemIcon: {fileID: -1838858699, guid: 1c34363cbb08ee440b2ec82255d4c27d, type: 3}
   itemPrice: 20000

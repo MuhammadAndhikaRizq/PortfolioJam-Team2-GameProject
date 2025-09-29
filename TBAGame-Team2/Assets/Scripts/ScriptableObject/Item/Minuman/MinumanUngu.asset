@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MinumanUngu
   m_EditorClassIdentifier: 
   itemName: MinumanUngu
-  itemIcon: {fileID: 21300000, guid: ee72e9b6d0d6ab94885caab1b4ea6d08, type: 3}
+  itemIcon: {fileID: 593779720, guid: a5bb4b332b62c854d8bf87c0536728a4, type: 3}
   itemPrice: 3450

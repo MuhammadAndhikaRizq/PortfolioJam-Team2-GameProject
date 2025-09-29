@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MinumanHijau
   m_EditorClassIdentifier: 
   itemName: MinumanHijau
-  itemIcon: {fileID: 21300000, guid: 3d2aa2dae309bea4aad8feee6a186580, type: 3}
+  itemIcon: {fileID: -293257825, guid: 70640508db7da684d9356d15db312809, type: 3}
   itemPrice: 3100

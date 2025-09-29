@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: IndomieHijau
   m_EditorClassIdentifier: 
   itemName: IndomieHijau
-  itemIcon: {fileID: 21300000, guid: d720c75ff5574e14faae04372ea6dc49, type: 3}
+  itemIcon: {fileID: 968525140, guid: f13bb55c04c48054fb81da750e70810f, type: 3}
   itemPrice: 2000

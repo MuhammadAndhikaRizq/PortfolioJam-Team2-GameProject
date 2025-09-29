@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EsKrimTaiyakiHijau
   m_EditorClassIdentifier: 
   itemName: EsKrimTaiyakiHijau
-  itemIcon: {fileID: 21300000, guid: 23696f5d8f595194592fb86b54d96527, type: 3}
+  itemIcon: {fileID: 842794489, guid: 23696f5d8f595194592fb86b54d96527, type: 3}
   itemPrice: 10000

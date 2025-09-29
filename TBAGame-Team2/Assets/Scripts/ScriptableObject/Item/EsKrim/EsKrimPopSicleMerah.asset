@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EsKrimPopSicleMerah
   m_EditorClassIdentifier: 
   itemName: EsKrimPopSicleMerah
-  itemIcon: {fileID: 21300000, guid: c92d4f824a500184eab424181c0f624c, type: 3}
+  itemIcon: {fileID: -1936976092, guid: c92d4f824a500184eab424181c0f624c, type: 3}
   itemPrice: 8500

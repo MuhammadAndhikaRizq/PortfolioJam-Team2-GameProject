@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: TehBotolMerah
   m_EditorClassIdentifier: 
   itemName: TehBotolMerah
-  itemIcon: {fileID: 21300000, guid: 99db89e4b9f166c4a973e2b94d8c64d1, type: 3}
+  itemIcon: {fileID: 1220112694, guid: 99db89e4b9f166c4a973e2b94d8c64d1, type: 3}
   itemPrice: 4350

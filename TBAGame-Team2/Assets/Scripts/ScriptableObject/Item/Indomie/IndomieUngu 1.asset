@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: IndomieUngu 1
   m_EditorClassIdentifier: 
   itemName: IndomieMerah
-  itemIcon: {fileID: 21300000, guid: b5edae7ed044dd44781d6158bb4a3989, type: 3}
+  itemIcon: {fileID: 1501796138, guid: d7d87732e6017bb46a01220def6a727f, type: 3}
   itemPrice: 3500

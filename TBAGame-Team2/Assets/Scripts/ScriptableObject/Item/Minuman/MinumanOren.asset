@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MinumanOren
   m_EditorClassIdentifier: 
   itemName: MinumanOren
-  itemIcon: {fileID: 21300000, guid: eb1a5842bc59a38488a926830522abc6, type: 3}
+  itemIcon: {fileID: -809710879, guid: e4235f6e991016a4587b8c7fca12c7ed, type: 3}
   itemPrice: 3750
