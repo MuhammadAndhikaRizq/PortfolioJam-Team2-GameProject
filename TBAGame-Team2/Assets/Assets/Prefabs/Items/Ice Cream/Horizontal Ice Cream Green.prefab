@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1907633318368788934}
   - component: {fileID: 7210277085231729519}
   - component: {fileID: 3957520795151908343}
+  - component: {fileID: 1042342789450183728}
   m_Layer: 0
   m_Name: Horizontal Ice Cream Green
   m_TagString: Item
@@ -76,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: 1354684781
   m_SortingLayer: 6
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 23696f5d8f595194592fb86b54d96527, type: 3}
+  m_Sprite: {fileID: 842794489, guid: 23696f5d8f595194592fb86b54d96527, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.5, y: 2.5}
+  m_Size: {x: 2.99, y: 1.73}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -108,7 +109,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2857662992535592207}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -126,7 +127,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &3957520795151908343
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163,8 +164,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.5, y: 3.5}
-    newSize: {x: 2.5, y: 2.5}
+    oldSize: {x: 2.99, y: 1.73}
+    newSize: {x: 2.99, y: 1.73}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -172,3 +173,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.6708004, y: 1.5119572}
   m_EdgeRadius: 0
+--- !u!114 &1042342789450183728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2857662992535592207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae59f7b0b4c7f4240aa7c111d85c0997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemData: {fileID: 11400000, guid: 72a644a6217d2e048aa31ae492d1172d, type: 2}

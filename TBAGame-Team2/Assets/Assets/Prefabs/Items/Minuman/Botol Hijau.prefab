@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8023129106328458913}
   - component: {fileID: 8729709430516446490}
   - component: {fileID: 5639512869549240164}
+  - component: {fileID: 8727189313709254043}
   m_Layer: 0
   m_Name: Botol Hijau
   m_TagString: Item
@@ -76,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: 1354684781
   m_SortingLayer: 6
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 70640508db7da684d9356d15db312809, type: 3}
+  m_Sprite: {fileID: -293257825, guid: 70640508db7da684d9356d15db312809, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.5, y: 2.5}
+  m_Size: {x: 0.51, y: 1.14}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -108,7 +109,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820098746816766192}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -126,7 +127,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &5639512869549240164
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163,8 +164,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 2.5}
-    newSize: {x: 2.5, y: 2.5}
+    oldSize: {x: 0.6, y: 1.35}
+    newSize: {x: 0.51, y: 1.14}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -172,3 +173,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6684321, y: 1.3893443}
   m_EdgeRadius: 0
+--- !u!114 &8727189313709254043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820098746816766192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae59f7b0b4c7f4240aa7c111d85c0997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemData: {fileID: 11400000, guid: a123bf30071834842b3e00e1e81bcea3, type: 2}
