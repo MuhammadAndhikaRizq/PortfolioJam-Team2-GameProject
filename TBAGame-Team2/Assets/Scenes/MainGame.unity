@@ -1497,7 +1497,7 @@ PrefabInstance:
     - target: {fileID: 8362689044895991756, guid: 8468d4f6f9075684296f33e77774f63f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 0.81
       objectReference: {fileID: 0}
     - target: {fileID: 8362689044895991756, guid: 8468d4f6f9075684296f33e77774f63f,
         type: 3}
@@ -2408,10 +2408,10 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 16183
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 16384
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -15679,7 +15679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &4004521085986549775
 MonoBehaviour:
   m_ObjectHideFlags: 0

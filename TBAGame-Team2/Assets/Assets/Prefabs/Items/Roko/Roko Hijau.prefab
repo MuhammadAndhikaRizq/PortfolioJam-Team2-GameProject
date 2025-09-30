@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -7843095022494482512}
   - component: {fileID: 8578455590703719451}
   - component: {fileID: 3543520443275818644}
+  - component: {fileID: -7770442372798716899}
   m_Layer: 0
   m_Name: Roko Hijau
   m_TagString: Untagged
@@ -178,3 +179,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.74137723, y: 0.7922897}
   m_EdgeRadius: 0
+--- !u!114 &-7770442372798716899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7030871136672930879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae59f7b0b4c7f4240aa7c111d85c0997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemData: {fileID: 11400000, guid: b5576285d821b3a42862f3260736d8f9, type: 2}

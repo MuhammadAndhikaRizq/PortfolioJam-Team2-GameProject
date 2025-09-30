@@ -101,6 +101,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: 0
+  dragMask:
+    serializedVersion: 2
+    m_Bits: 0
+  dropMask:
+    serializedVersion: 2
+    m_Bits: 32567
 --- !u!50 &4051054814095108043
 Rigidbody2D:
   serializedVersion: 4
