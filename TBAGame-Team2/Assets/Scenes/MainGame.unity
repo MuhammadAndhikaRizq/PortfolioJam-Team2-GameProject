@@ -3344,7 +3344,7 @@ GameObject:
   - component: {fileID: 739725771}
   - component: {fileID: 739725770}
   - component: {fileID: 739725769}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Ice Cream Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7594,7 +7594,7 @@ GameObject:
   - component: {fileID: 1927869585}
   - component: {fileID: 1927869583}
   - component: {fileID: 1927869584}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Fridge Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

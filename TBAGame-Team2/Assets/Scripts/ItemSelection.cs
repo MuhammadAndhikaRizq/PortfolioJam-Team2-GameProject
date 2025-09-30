@@ -9,10 +9,25 @@ public class ItemSelection : MonoBehaviour
     private Vector3 offset;
 
     public bool isDragging = false;
+    Collider2D objectCollider;
+
+    [Header("Mask")]
+    [SerializeField] protected LayerMask dragMask;
+    [SerializeField] protected LayerMask dropMask = ~0;
 
     void Awake()
     {
         startPosition = transform.position;
+        dragMask = LayerMask.GetMask("Trigger");
+    }
+
+    void Start()
+    {
+        objectCollider = GetComponent<Collider2D>();
+        if (objectCollider == null)
+        {
+            Debug.LogError("Collider2D component not found on " + gameObject.name);
+        }
     }
 
     void OnCollisionStay2D(Collision2D other)
@@ -25,13 +40,15 @@ public class ItemSelection : MonoBehaviour
         InputSystem();
         if (isDragging)
         {
-            //this.GetComponent<Collider2D>().enabled = false;
+            objectCollider.includeLayers = dragMask;
+            objectCollider.excludeLayers = ~dragMask;
             transform.position = MouseWorldPosition(Input.mousePosition) + offset;
         }
-        /*else
+        else
         {
-             this.GetComponent<Collider2D>().enabled = true;
-        }*/
+            objectCollider.includeLayers = dropMask;
+            objectCollider.excludeLayers = ~dropMask;
+        }
     }
 
     private void InputSystem()
