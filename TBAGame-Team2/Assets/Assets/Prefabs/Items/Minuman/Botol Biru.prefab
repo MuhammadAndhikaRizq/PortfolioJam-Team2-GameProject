@@ -101,12 +101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: 0
-  dragMask:
-    serializedVersion: 2
-    m_Bits: 16384
-  dropMask:
-    serializedVersion: 2
-    m_Bits: 32567
 --- !u!50 &8729709430516446490
 Rigidbody2D:
   serializedVersion: 4
@@ -146,10 +140,10 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

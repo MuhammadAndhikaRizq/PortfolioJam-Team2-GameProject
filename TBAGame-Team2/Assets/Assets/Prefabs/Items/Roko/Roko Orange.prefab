@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: -7702258685220758904}
   - component: {fileID: 5163922350186393125}
   - component: {fileID: 2451466920474533490}
-  - component: {fileID: -3315420995294890529}
   m_Layer: 0
   m_Name: Roko Orange
   m_TagString: Untagged
@@ -133,7 +132,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!61 &2451466920474533490
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,10 +145,10 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -179,16 +178,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.74137723, y: 0.7922897}
   m_EdgeRadius: 0
---- !u!114 &-3315420995294890529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3570763443910281309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae59f7b0b4c7f4240aa7c111d85c0997, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemData: {fileID: 11400000, guid: 29b83257cf2d9ff4cbaafda54d3323dd, type: 2}
