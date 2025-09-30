@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8393759698232472325}
   - component: {fileID: 8297073084523811381}
   - component: {fileID: 2160370044501558718}
+  - component: {fileID: -8814133420522250068}
   m_Layer: 0
   m_Name: Roko Biru
   m_TagString: Untagged
@@ -132,7 +133,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &2160370044501558718
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -145,10 +146,10 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -178,3 +179,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.74137723, y: 0.7922897}
   m_EdgeRadius: 0
+--- !u!114 &-8814133420522250068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630920549591115274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae59f7b0b4c7f4240aa7c111d85c0997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemData: {fileID: 11400000, guid: 4a9ba0770f98e4d4382b1af02ececf5b, type: 2}
