@@ -5,19 +5,19 @@ using UnityEngine;
 public class ChangeSceneCollide : MonoBehaviour
 {
     [Header("UI Manager")]
-    // UI/Scene yang akan dituju setelah item keluar
+   
     public GameObject targetScene; 
-    
-    // Referensi ke script SwitchUI Anda
+    public float scaleSpeed = 0.5f;
+    public Vector3 targetScale = new Vector3(0.4f, 0.4f, 0.4f);
     private SwitchUI switchUI;
+    
 
     [Header("Item Setup")]
-    // Pastikan tag ini sama dengan tag pada GameObject item Anda
+
     public string itemTag = "Item"; 
 
     void Start()
     {
-        // Cari script SwitchUI di scene saat permainan dimulai
         switchUI = FindObjectOfType<SwitchUI>();
 
         if (switchUI == null)
@@ -26,18 +26,18 @@ public class ChangeSceneCollide : MonoBehaviour
         }
     }
 
-    // Fungsi ini akan dieksekusi HANYA KETIKA item KELUAR dari area trigger
+  
     void OnTriggerExit2D(Collider2D other)
     {
-        // Cek apakah objek yang keluar memiliki tag yang benar
+      
         if (other.CompareTag(itemTag))
         {
             Debug.Log("Item dengan tag '" + itemTag + "' telah keluar dari area. Mengganti scene...");
-            
-            // Panggil fungsi untuk beralih ke UI/scene target
+
             if (targetScene != null && switchUI != null)
             {
                 other.transform.SetParent(targetScene.transform);
+                other.transform.localScale = targetScale;
                 switchUI.SwitchTo(targetScene);
             }
             else

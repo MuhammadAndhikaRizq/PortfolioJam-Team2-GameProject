@@ -184,7 +184,7 @@ public class Cashier : MonoBehaviour
         }
     }
 
-    void OnConfirmTotal()
+    public void OnConfirmTotal()
     {
         if (_calculatedTotal == _currentOrder.TotalPrice)
         {

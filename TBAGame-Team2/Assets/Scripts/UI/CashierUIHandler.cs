@@ -26,6 +26,11 @@ public class CashierUIHandler : MonoBehaviour
     {
         Cashier.Instance.OnClearPressed();
     }
+
+    public void OnConfirmButtonPressed()
+    {
+        Cashier.Instance.OnConfirmTotal();
+    }
     
     public void OnDenominationButtonPressed(TextMeshProUGUI denominationText) // Changed parameter type
     {
