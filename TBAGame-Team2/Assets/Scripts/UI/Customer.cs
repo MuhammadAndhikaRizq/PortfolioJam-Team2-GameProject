@@ -229,7 +229,7 @@ public class Customer : MonoBehaviour
 
     void MakeOrder()
     {
-        int count = Random.Range(1, 4);
+        int count = Random.Range(1, 6);
         for (int i = 0; i < count; i++)
         {
             orderList.Add(menuPool[Random.Range(0, menuPool.Count)]);

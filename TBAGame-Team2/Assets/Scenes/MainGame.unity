@@ -1414,6 +1414,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Money
       objectReference: {fileID: 0}
+    - target: {fileID: 3996350050078096581, guid: 8468d4f6f9075684296f33e77774f63f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830328202121739384, guid: 8468d4f6f9075684296f33e77774f63f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8362689044895991756, guid: 8468d4f6f9075684296f33e77774f63f,
         type: 3}
       propertyPath: m_Pivot.x
