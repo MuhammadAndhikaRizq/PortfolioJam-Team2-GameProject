@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -1155971908676586564}
   m_Layer: 0
   m_Name: Horizontal Ice Cream Orange
-  m_TagString: Item
+  m_TagString: IceCream
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

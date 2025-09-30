@@ -9,6 +9,7 @@ TagManager:
   - Item
   - NPC
   - PlasticBag
+  - IceCream
   layers:
   - Default
   - TransparentFX

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -7804413882073503665}
   m_Layer: 0
   m_Name: Ice Cream Vertical Purple
-  m_TagString: Item
+  m_TagString: IceCream
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,6 +101,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: 0
+  dragMask:
+    serializedVersion: 2
+    m_Bits: 0
+  dropMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!50 &5421035635233569806
 Rigidbody2D:
   serializedVersion: 4
