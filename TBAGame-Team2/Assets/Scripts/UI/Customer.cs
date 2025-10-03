@@ -11,6 +11,7 @@ public class Customer : MonoBehaviour
     public List<Image> orderDisplay;
     public NPCData data;
     ItemHolder itemHolder;
+    public int count;
 
     [Header("Patience")]
     [SerializeField] private Slider patienceBar;
@@ -31,6 +32,9 @@ public class Customer : MonoBehaviour
 
     private readonly HashSet<ItemHolder> _counted = new(); //Guard
     private readonly List<ItemHolder> _servedItems = new();
+    private readonly Dictionary<ItemHolder, int> _slotByHolder = new();
+
+    
 
     public System.Action OnLeave;
 
@@ -78,37 +82,53 @@ public class Customer : MonoBehaviour
 
     void ResetUI(ItemHolder holder)
     {
-        if (_counted.Contains(holder))
-        {
-            _counted.Remove(holder);
+        if (!_counted.Contains(holder)) return;
 
-            int index = orderList.FindIndex(i => i == holder.itemData);
-            if (index >= 0 && index < orderDisplay.Count)
+        _counted.Remove(holder);
+
+        // Balikin slot yang sebelumnya ditandai untuk holder ini
+        if (_slotByHolder.TryGetValue(holder, out int slot))
+        {
+            if (slot >= 0 && slot < orderDisplay.Count)
             {
-                orderDisplay[index].color = Color.white;
+                orderDisplay[slot].color = Color.white;
                 _collectedItems = Mathf.Max(0, _collectedItems - 1);
             }
+            _slotByHolder.Remove(holder);
         }
-    }
+}
+
 
     void CollectItem(ItemHolder holder)
     {
+        var item = holder.itemData;
+
+        int slot = FindFirstUnseveredSlot(item);
+        if (slot == -1) return; // No available slot
+
+        orderDisplay[slot].color = Color.gray;
+        _slotByHolder[holder] = slot;
         _collectedItems++;
 
-        int index = orderList.FindIndex(i => i == holder.itemData);
-
-        if (index >= 0 && index < orderDisplay.Count)
-        {
-            orderDisplay[index].color = Color.gray; // tandai slot sesuai item
-        }
-
-        if (_collectedItems >= orderList.Count)
+        if(_collectedItems >= Mathf.Min(orderList.Count, orderDisplay.Count))
         {
             StartCashierMiniGame();
         }
 
         if (!_servedItems.Contains(holder))
             _servedItems.Add(holder);
+    }
+
+    int FindFirstUnseveredSlot(ItemData item)
+    {
+        for (int i = 0; i < orderList.Count; i++)
+        {
+            if (orderList[i] == item && orderDisplay[i].color != Color.gray)
+            {
+                return i;
+            }
+        }
+        return -1; // No available slot
     }
 
     void StartCashierMiniGame()
@@ -229,7 +249,7 @@ public class Customer : MonoBehaviour
 
     void MakeOrder()
     {
-        int count = Random.Range(1, 6);
+        count = Random.Range(1, 6);
         for (int i = 0; i < count; i++)
         {
             orderList.Add(menuPool[Random.Range(0, menuPool.Count)]);
@@ -239,31 +259,13 @@ public class Customer : MonoBehaviour
 
     void ShowOrder()
     {
-        // Clear all displays first
-        foreach (Image display in orderDisplay)
+        int count = Mathf.Min(orderList.Count, orderDisplay.Count);
+        for(int i = 0; i < count; i++)
         {
-            display.gameObject.SetActive(false);
+            orderDisplay[i].sprite = orderList[i].itemIcon;
+            orderDisplay[i].color = Color.white;
+            orderDisplay[i].gameObject.SetActive(true);
         }
-        
-        // Group items by type and show with quantity indicators
-        var groupedItems = orderList.GroupBy(item => item);
-        int displayIndex = 0;
-        
-        foreach (var group in groupedItems)
-        {
-            if (displayIndex >= orderDisplay.Count) break;
-            
-            orderDisplay[displayIndex].sprite = group.Key.itemIcon;
-            orderDisplay[displayIndex].gameObject.SetActive(true);
-            
-            // Add quantity text (you'll need to add Text components to your order displays)
-            Text quantityText = orderDisplay[displayIndex].GetComponentInChildren<Text>();
-            if (quantityText != null)
-            {
-                quantityText.text = group.Count().ToString();
-            }
-            
-            displayIndex++;
-        }
+
     }
 }
