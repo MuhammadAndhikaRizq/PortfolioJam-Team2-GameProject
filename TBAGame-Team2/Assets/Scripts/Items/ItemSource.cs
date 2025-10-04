@@ -19,7 +19,7 @@ public class ItemSource : MonoBehaviour
             Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mouseWorld.z = -2;
             GameObject clone = Instantiate(objectPrefab, mouseWorld, Quaternion.identity);
-            clone.transform.SetParent(transform);
+            clone.transform.SetParent(transform.parent);
             lastClickTime = Time.time;
 
         }
